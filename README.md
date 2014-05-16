@@ -1,4 +1,4 @@
-UIDynamics
+Design-Pattern
 ==========
 
-UIDynamics presentation
+MVC vs MVP vs MVVM
