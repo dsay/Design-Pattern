@@ -26,6 +26,8 @@
 
 - (void)animationScrollView:(UIScrollView *)scrollV toPoint:(CGPoint)point
 {
+    NSParameterAssert(scrollV);
+    
     static BOOL isAnimated = NO;
     if (!isAnimated) {
         [UIView animateWithDuration:.35f animations:^{
@@ -40,6 +42,9 @@
 
 - (UITextField *)nextFieldAfter:(UITextField *)textField from:(NSArray *)array
 {
+    NSParameterAssert(textField);
+    NSParameterAssert(array);
+
     NSAssert([array containsObject:textField], @"TextField does not include in textFields collection");
     NSInteger index = [array indexOfObject:textField];
     

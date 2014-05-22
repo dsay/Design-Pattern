@@ -28,16 +28,5 @@
     self.loginB.tintColor = [UIColor redColor];
 }
 
-- (void)reloadView
-{
-    NSParameterAssert(self.delegate);
-    NSAssert([[self.delegate class] conformsToProtocol:@protocol(DPLoginVProtocol)],
-             @"Delegate not Confirm to Protocol");
-    
-    self.emailTF.text = [self.delegate loginVEmail];
-    self.passwordTF.text = [self.delegate loginVPassword];
-    self.messageL.text = [self.delegate loginVMessageText];
-}
-
 @end
 

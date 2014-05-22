@@ -1,7 +1,9 @@
 #import "DPLoginM.h"
 
-#import <AFNetworking.h>
-#import "DPListViewController.h"
+#import "DPUserApi.h"
+
+#import "DPListC.h"
+#import "DPListM.h"
 
 typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
     DPLoginMDefault,
@@ -12,17 +14,11 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
 @interface DPLoginM()
 
 @property (nonatomic, assign) DPLoginMStatus status;
-@property (nonatomic, strong) AFHTTPRequestOperationManager *manager;
 @property (nonatomic, assign) BOOL canEdit;
 
 @end
 
 @implementation DPLoginM
-
-@synthesize email = _email;
-@synthesize password = _password;
-@synthesize messageText = _messageText;
-@synthesize title = _title;
 
 - (instancetype)init
 {
@@ -39,7 +35,6 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
     _email = @"";
     _password = @"";
     _messageText = @"Welcome to MVC app";
-    _manager = [AFHTTPRequestOperationManager new];
     _canEdit = YES;
 }
 
@@ -65,7 +60,10 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
 
 - (void)loginSuccess
 {
-    DPListViewController *controller = [DPListViewController new];
+    DPListC *controller = [DPListC new];
+    DPListM *model = [DPListM new];
+    controller.model = model;
+    
     [self.delegate showController:controller];
 }
 
@@ -79,25 +77,17 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
         self.status = DPLoginMIncorrectInput;
         return;
     }
-    
-    NSDictionary *params = @{@"email": self.email,
-                             @"password": self.password};
-    
-    AFHTTPRequestOperation *operation = [self.manager GET:@"http://mvc/api/login"
-                                           parameters:params
-                                              success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
-    }
-                                              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                                  
-                                                  if ([self.email isEqualToString:@"www@www.ww"]) {
-                                                      [self loginSuccess];
-                                                  }else
-                                                      self.status = DPLoginMServerError;
-                                                  
-                                                  _canEdit = YES;
+    AFHTTPRequestOperation *operation = [DPUserApi loginUserEmail:self.email
+                                                         password:self.password
+                                                       completion:^(NSDictionary *response, NSString *error) {
+        if ([self.email isEqualToString:@"www@www.ww"]) {
+            [self loginSuccess];
+        }else
+            self.status = DPLoginMServerError;
+        
+        _canEdit = YES;
     }];
-    
     _canEdit = NO;
     [operation start];
 }

@@ -21,13 +21,23 @@
 		324A15B71926281C008FAF8D /* MVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15B61926281C008FAF8D /* MVCTests.m */; };
 		324A15C819262950008FAF8D /* DPLoginC.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15C619262950008FAF8D /* DPLoginC.m */; };
 		324A15C919262950008FAF8D /* DPLoginC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15C719262950008FAF8D /* DPLoginC.xib */; };
-		324A15CD19262962008FAF8D /* DPListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15CB19262962008FAF8D /* DPListViewController.m */; };
-		324A15CE19262962008FAF8D /* DPListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15CC19262962008FAF8D /* DPListViewController.xib */; };
+		324A15CD19262962008FAF8D /* DPListC.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15CB19262962008FAF8D /* DPListC.m */; };
+		324A15CE19262962008FAF8D /* DPListC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15CC19262962008FAF8D /* DPListC.xib */; };
 		324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D4192629C5008FAF8D /* DPDetailsViewController.m */; };
 		324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15D5192629C5008FAF8D /* DPDetailsViewController.xib */; };
 		324A15DA19262B17008FAF8D /* DPLoginV.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D919262B17008FAF8D /* DPLoginV.m */; };
 		324A15DD19262B2D008FAF8D /* DPLoginM.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15DC19262B2D008FAF8D /* DPLoginM.m */; };
 		32CF7B3F192C8139006A962A /* DPBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B3E192C8139006A962A /* DPBaseVC.m */; };
+		32CF7B4C192DD4FB006A962A /* DPListM.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B4B192DD4FB006A962A /* DPListM.m */; };
+		32CF7B4F192DD5D0006A962A /* DPListV.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B4E192DD5D0006A962A /* DPListV.m */; };
+		32CF7B54192E09DA006A962A /* DPApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B53192E09DA006A962A /* DPApiClient.m */; };
+		32CF7B58192E19D3006A962A /* DPUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B57192E19D3006A962A /* DPUserApi.m */; };
+		32CF7B5B192E1E89006A962A /* DPWeatherApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B5A192E1E89006A962A /* DPWeatherApi.m */; };
+		32CF7B5D192E21DD006A962A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CF7B5C192E21DD006A962A /* CoreData.framework */; };
+		32CF7B60192E21FD006A962A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B5E192E21FD006A962A /* Model.xcdatamodeld */; };
+		32CF7B63192E281E006A962A /* CurrentCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B62192E281E006A962A /* CurrentCondition.m */; };
+		32CF7B66192E281F006A962A /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B65192E281F006A962A /* Weather.m */; };
+		32CF7B6A192E2C1E006A962A /* DPApiMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B69192E2C1E006A962A /* DPApiMapper.m */; };
 		E79C721442BC485B8482D9C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EFDCDA381F43FDBE1D0434 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,9 +72,9 @@
 		324A15C519262950008FAF8D /* DPLoginC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginC.h; sourceTree = "<group>"; };
 		324A15C619262950008FAF8D /* DPLoginC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginC.m; sourceTree = "<group>"; };
 		324A15C719262950008FAF8D /* DPLoginC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPLoginC.xib; sourceTree = "<group>"; };
-		324A15CA19262962008FAF8D /* DPListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListViewController.h; sourceTree = "<group>"; };
-		324A15CB19262962008FAF8D /* DPListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListViewController.m; sourceTree = "<group>"; };
-		324A15CC19262962008FAF8D /* DPListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPListViewController.xib; sourceTree = "<group>"; };
+		324A15CA19262962008FAF8D /* DPListC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListC.h; sourceTree = "<group>"; };
+		324A15CB19262962008FAF8D /* DPListC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListC.m; sourceTree = "<group>"; };
+		324A15CC19262962008FAF8D /* DPListC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPListC.xib; sourceTree = "<group>"; };
 		324A15D3192629C5008FAF8D /* DPDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDetailsViewController.h; sourceTree = "<group>"; };
 		324A15D4192629C5008FAF8D /* DPDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDetailsViewController.m; sourceTree = "<group>"; };
 		324A15D5192629C5008FAF8D /* DPDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPDetailsViewController.xib; sourceTree = "<group>"; };
@@ -74,6 +84,24 @@
 		324A15DC19262B2D008FAF8D /* DPLoginM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginM.m; sourceTree = "<group>"; };
 		32CF7B3D192C8139006A962A /* DPBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBaseVC.h; sourceTree = "<group>"; };
 		32CF7B3E192C8139006A962A /* DPBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBaseVC.m; sourceTree = "<group>"; };
+		32CF7B4A192DD4FB006A962A /* DPListM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListM.h; sourceTree = "<group>"; };
+		32CF7B4B192DD4FB006A962A /* DPListM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListM.m; sourceTree = "<group>"; };
+		32CF7B4D192DD5D0006A962A /* DPListV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListV.h; sourceTree = "<group>"; };
+		32CF7B4E192DD5D0006A962A /* DPListV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListV.m; sourceTree = "<group>"; };
+		32CF7B52192E09DA006A962A /* DPApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiClient.h; sourceTree = "<group>"; };
+		32CF7B53192E09DA006A962A /* DPApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiClient.m; sourceTree = "<group>"; };
+		32CF7B56192E19D3006A962A /* DPUserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPUserApi.h; sourceTree = "<group>"; };
+		32CF7B57192E19D3006A962A /* DPUserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPUserApi.m; sourceTree = "<group>"; };
+		32CF7B59192E1E89006A962A /* DPWeatherApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPWeatherApi.h; sourceTree = "<group>"; };
+		32CF7B5A192E1E89006A962A /* DPWeatherApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPWeatherApi.m; sourceTree = "<group>"; };
+		32CF7B5C192E21DD006A962A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		32CF7B5F192E21FD006A962A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		32CF7B61192E281E006A962A /* CurrentCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentCondition.h; sourceTree = "<group>"; };
+		32CF7B62192E281E006A962A /* CurrentCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentCondition.m; sourceTree = "<group>"; };
+		32CF7B64192E281F006A962A /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		32CF7B65192E281F006A962A /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		32CF7B68192E2C1E006A962A /* DPApiMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiMapper.h; sourceTree = "<group>"; };
+		32CF7B69192E2C1E006A962A /* DPApiMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiMapper.m; sourceTree = "<group>"; };
 		D667D722653B4C659EF03076 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32CF7B5D192E21DD006A962A /* CoreData.framework in Frameworks */,
 				324A15941926281C008FAF8D /* CoreGraphics.framework in Frameworks */,
 				324A15961926281C008FAF8D /* UIKit.framework in Frameworks */,
 				324A15921926281C008FAF8D /* Foundation.framework in Frameworks */,
@@ -126,6 +155,7 @@
 		324A15901926281C008FAF8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32CF7B5C192E21DD006A962A /* CoreData.framework */,
 				324A15911926281C008FAF8D /* Foundation.framework */,
 				324A15931926281C008FAF8D /* CoreGraphics.framework */,
 				324A15951926281C008FAF8D /* UIKit.framework */,
@@ -178,6 +208,8 @@
 		324A15C019262906008FAF8D /* source */ = {
 			isa = PBXGroup;
 			children = (
+				32CF7B50192E09BD006A962A /* data_base */,
+				32CF7B51192E09BD006A962A /* networking */,
 				324A15C119262906008FAF8D /* controllers */,
 			);
 			path = source;
@@ -197,9 +229,13 @@
 		324A15C319262906008FAF8D /* list_vc */ = {
 			isa = PBXGroup;
 			children = (
-				324A15CA19262962008FAF8D /* DPListViewController.h */,
-				324A15CB19262962008FAF8D /* DPListViewController.m */,
-				324A15CC19262962008FAF8D /* DPListViewController.xib */,
+				324A15CA19262962008FAF8D /* DPListC.h */,
+				324A15CB19262962008FAF8D /* DPListC.m */,
+				324A15CC19262962008FAF8D /* DPListC.xib */,
+				32CF7B4D192DD5D0006A962A /* DPListV.h */,
+				32CF7B4E192DD5D0006A962A /* DPListV.m */,
+				32CF7B4A192DD4FB006A962A /* DPListM.h */,
+				32CF7B4B192DD4FB006A962A /* DPListM.m */,
 			);
 			path = list_vc;
 			sourceTree = "<group>";
@@ -235,6 +271,41 @@
 				32CF7B3E192C8139006A962A /* DPBaseVC.m */,
 			);
 			path = base;
+			sourceTree = "<group>";
+		};
+		32CF7B50192E09BD006A962A /* data_base */ = {
+			isa = PBXGroup;
+			children = (
+				32CF7B5E192E21FD006A962A /* Model.xcdatamodeld */,
+				32CF7B64192E281F006A962A /* Weather.h */,
+				32CF7B65192E281F006A962A /* Weather.m */,
+				32CF7B61192E281E006A962A /* CurrentCondition.h */,
+				32CF7B62192E281E006A962A /* CurrentCondition.m */,
+			);
+			path = data_base;
+			sourceTree = "<group>";
+		};
+		32CF7B51192E09BD006A962A /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				32CF7B67192E2C0D006A962A /* mapper */,
+				32CF7B52192E09DA006A962A /* DPApiClient.h */,
+				32CF7B53192E09DA006A962A /* DPApiClient.m */,
+				32CF7B56192E19D3006A962A /* DPUserApi.h */,
+				32CF7B57192E19D3006A962A /* DPUserApi.m */,
+				32CF7B59192E1E89006A962A /* DPWeatherApi.h */,
+				32CF7B5A192E1E89006A962A /* DPWeatherApi.m */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		32CF7B67192E2C0D006A962A /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				32CF7B68192E2C1E006A962A /* DPApiMapper.h */,
+				32CF7B69192E2C1E006A962A /* DPApiMapper.m */,
+			);
+			path = mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				324A15CE19262962008FAF8D /* DPListViewController.xib in Resources */,
+				324A15CE19262962008FAF8D /* DPListC.xib in Resources */,
 				324A15C919262950008FAF8D /* DPLoginC.xib in Resources */,
 				324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */,
 				324A159C1926281C008FAF8D /* InfoPlist.strings in Resources */,
@@ -371,14 +442,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				324A15CD19262962008FAF8D /* DPListViewController.m in Sources */,
+				324A15CD19262962008FAF8D /* DPListC.m in Sources */,
+				32CF7B63192E281E006A962A /* CurrentCondition.m in Sources */,
+				32CF7B54192E09DA006A962A /* DPApiClient.m in Sources */,
 				324A15DD19262B2D008FAF8D /* DPLoginM.m in Sources */,
+				32CF7B66192E281F006A962A /* Weather.m in Sources */,
+				32CF7B60192E21FD006A962A /* Model.xcdatamodeld in Sources */,
+				32CF7B58192E19D3006A962A /* DPUserApi.m in Sources */,
+				32CF7B4F192DD5D0006A962A /* DPListV.m in Sources */,
 				324A15A21926281C008FAF8D /* DPAppDelegate.m in Sources */,
 				324A15DA19262B17008FAF8D /* DPLoginV.m in Sources */,
 				324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */,
 				324A15C819262950008FAF8D /* DPLoginC.m in Sources */,
 				32CF7B3F192C8139006A962A /* DPBaseVC.m in Sources */,
+				32CF7B5B192E1E89006A962A /* DPWeatherApi.m in Sources */,
+				32CF7B6A192E2C1E006A962A /* DPApiMapper.m in Sources */,
 				324A159E1926281C008FAF8D /* main.m in Sources */,
+				32CF7B4C192DD4FB006A962A /* DPListM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +669,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		32CF7B5E192E21FD006A962A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				32CF7B5F192E21FD006A962A /* Model.xcdatamodel */,
+			);
+			currentVersion = 32CF7B5F192E21FD006A962A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 324A15861926281C008FAF8D /* Project object */;
 }

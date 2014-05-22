@@ -3,7 +3,7 @@
 #import "DPLoginV.h"
 #import "DPLoginM.h"
 
-@interface DPLoginC ()<DPLoginVProtocol, DPLoginMProtocol, UITextFieldDelegate>
+@interface DPLoginC ()<DPLoginMProtocol, UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet DPLoginV *view;
 
@@ -14,10 +14,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.view.delegate = self;
-    self.model.delegate = self;
     
+    NSParameterAssert(self.model);
+    NSParameterAssert(self.view);
+
+    self.model.delegate = self;
     self.view.emailTF.delegate = self;
     self.view.passwordTF.delegate = self;
     
@@ -31,20 +32,32 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.view reloadView];
+    [self reloadView];
 }
 
-#pragma mark - View Selectors
-- (void)pressLogin
-{    
-    [self.view endEditing:YES];
-    [self.model login];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    CGFloat topInsets = self.topLayoutGuide.length;
+    CGSize size = self.view.frame.size;
+    size.height -= topInsets;
+    
+    self.view.scrollV.contentSize = size;
+    [self.view.scrollV setContentOffset:CGPointMake(0, - topInsets) animated:NO];
+}
+
+- (void)reloadView
+{
+    self.view.emailTF.text = self.model.email;
+    self.view.passwordTF.text = self.model.password;
+    self.view.messageL.text = self.model.messageText;
 }
 
 #pragma mark - Model Delegate
 - (void)loginMDidUpdateData
 {
-    [self.view reloadView];
+    [self reloadView];
 }
 
 - (void)showController:(UIViewController *)controller;
@@ -52,27 +65,18 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-#pragma mark - View Delegate
-- (NSString *)loginVEmail
+#pragma mark - View Selectors
+- (void)pressLogin
 {
-    return self.model.email;
-}
-
-- (NSString *)loginVPassword
-{
-    return self.model.password;
-}
-
-- (NSString *)loginVMessageText
-{
-    return self.model.messageText;
+    [self.view endEditing:YES];
+    [self.model login];
 }
 
 #pragma mark - Text Field Delegate
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     [self animationScrollView:self.view.scrollV
-                      toPoint:CGPointMake(0, 0)];
+                      toPoint:CGPointMake(0, - self.topLayoutGuide.length)];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -83,7 +87,7 @@
     CGPoint scrollTo = {0, (self.view.scrollV.contentOffset.y +
                             CGRectGetMinY(positionOnView) -
                             CGRectGetHeight(textField.frame)
-                            )};
+                            - 100)};
     
     [self animationScrollView:self.view.scrollV
                       toPoint:scrollTo];
@@ -101,7 +105,7 @@
         [self.model setPassword:value];
     }
     
-    return NO;
+    return NO;   //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
