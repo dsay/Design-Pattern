@@ -1,17 +1,20 @@
 #import "DPListM.h"
 
-#import "DPWeatherApi.h"
 
 @interface DPListM ()
+
+@property (nonatomic, strong) DPManagerProvider *manager;
 
 @end
 
 @implementation DPListM
 
-- (instancetype)init
+- (instancetype)initWithManagerProvider:(DPManagerProvider *)manager
 {
+    NSParameterAssert(manager);
     if (self = [super init]) {
         [self setup];
+        _manager = manager;
     }
     return self;
 }
@@ -25,10 +28,7 @@
 
 - (void)updateData
 {
-    AFHTTPRequestOperation *operation = [DPWeatherApi getWeatherCompletion:^(NSDictionary *response, NSString *error) {
-        
-    }];
-    [operation start];
+
 }
 
 @end

@@ -19,25 +19,29 @@
 		324A15AD1926281C008FAF8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324A15951926281C008FAF8D /* UIKit.framework */; };
 		324A15B51926281C008FAF8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 324A15B31926281C008FAF8D /* InfoPlist.strings */; };
 		324A15B71926281C008FAF8D /* MVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15B61926281C008FAF8D /* MVCTests.m */; };
-		324A15C819262950008FAF8D /* DPLoginC.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15C619262950008FAF8D /* DPLoginC.m */; };
-		324A15C919262950008FAF8D /* DPLoginC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15C719262950008FAF8D /* DPLoginC.xib */; };
+		324A15C819262950008FAF8D /* DPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15C619262950008FAF8D /* DPLoginViewController.m */; };
+		324A15C919262950008FAF8D /* DPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15C719262950008FAF8D /* DPLoginViewController.xib */; };
 		324A15CD19262962008FAF8D /* DPListC.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15CB19262962008FAF8D /* DPListC.m */; };
 		324A15CE19262962008FAF8D /* DPListC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15CC19262962008FAF8D /* DPListC.xib */; };
 		324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D4192629C5008FAF8D /* DPDetailsViewController.m */; };
 		324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15D5192629C5008FAF8D /* DPDetailsViewController.xib */; };
-		324A15DA19262B17008FAF8D /* DPLoginV.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D919262B17008FAF8D /* DPLoginV.m */; };
-		324A15DD19262B2D008FAF8D /* DPLoginM.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15DC19262B2D008FAF8D /* DPLoginM.m */; };
-		32CF7B3F192C8139006A962A /* DPBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B3E192C8139006A962A /* DPBaseVC.m */; };
+		324A15DA19262B17008FAF8D /* DPLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D919262B17008FAF8D /* DPLoginView.m */; };
+		324A15DD19262B2D008FAF8D /* DPLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15DC19262B2D008FAF8D /* DPLoginModel.m */; };
+		325139D31962CF780016DD51 /* stub.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 325139D21962CF780016DD51 /* stub.jpg */; };
+		325139D51962D0070016DD51 /* login.txt in Resources */ = {isa = PBXBuildFile; fileRef = 325139D41962D0070016DD51 /* login.txt */; };
 		32CF7B4C192DD4FB006A962A /* DPListM.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B4B192DD4FB006A962A /* DPListM.m */; };
 		32CF7B4F192DD5D0006A962A /* DPListV.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B4E192DD5D0006A962A /* DPListV.m */; };
-		32CF7B54192E09DA006A962A /* DPApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B53192E09DA006A962A /* DPApiClient.m */; };
-		32CF7B58192E19D3006A962A /* DPUserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B57192E19D3006A962A /* DPUserApi.m */; };
-		32CF7B5B192E1E89006A962A /* DPWeatherApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B5A192E1E89006A962A /* DPWeatherApi.m */; };
 		32CF7B5D192E21DD006A962A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CF7B5C192E21DD006A962A /* CoreData.framework */; };
-		32CF7B60192E21FD006A962A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B5E192E21FD006A962A /* Model.xcdatamodeld */; };
-		32CF7B63192E281E006A962A /* CurrentCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B62192E281E006A962A /* CurrentCondition.m */; };
-		32CF7B66192E281F006A962A /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B65192E281F006A962A /* Weather.m */; };
-		32CF7B6A192E2C1E006A962A /* DPApiMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B69192E2C1E006A962A /* DPApiMapper.m */; };
+		32CF7BA1192F678C006A962A /* DPContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B8A192F678C006A962A /* DPContextProvider.m */; };
+		32CF7BA2192F678C006A962A /* DPDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B8C192F678C006A962A /* DPDataStorage.m */; };
+		32CF7BA3192F678C006A962A /* DPDataStorageRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B8E192F678C006A962A /* DPDataStorageRequestBuilder.m */; };
+		32CF7BA4192F678C006A962A /* CurrentCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B91192F678C006A962A /* CurrentCondition.m */; };
+		32CF7BA5192F678C006A962A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B92192F678C006A962A /* Model.xcdatamodeld */; };
+		32CF7BA6192F678C006A962A /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B95192F678C006A962A /* Weather.m */; };
+		32CF7BA7192F678C006A962A /* DPManagerProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B97192F678C006A962A /* DPManagerProvider.m */; };
+		32CF7BA8192F678C006A962A /* DPDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9A192F678C006A962A /* DPDataMapper.m */; };
+		32CF7BA9192F678C006A962A /* DPApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9D192F678C006A962A /* DPApiClient.m */; };
+		32CF7BAA192F678C006A962A /* DPApiClientRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9F192F678C006A962A /* DPApiClientRequestBuilder.m */; };
 		E79C721442BC485B8482D9C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EFDCDA381F43FDBE1D0434 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,39 +73,48 @@
 		324A15B21926281C008FAF8D /* MVCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MVCTests-Info.plist"; sourceTree = "<group>"; };
 		324A15B41926281C008FAF8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		324A15B61926281C008FAF8D /* MVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCTests.m; sourceTree = "<group>"; };
-		324A15C519262950008FAF8D /* DPLoginC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginC.h; sourceTree = "<group>"; };
-		324A15C619262950008FAF8D /* DPLoginC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginC.m; sourceTree = "<group>"; };
-		324A15C719262950008FAF8D /* DPLoginC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPLoginC.xib; sourceTree = "<group>"; };
+		324A15C519262950008FAF8D /* DPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginViewController.h; sourceTree = "<group>"; };
+		324A15C619262950008FAF8D /* DPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginViewController.m; sourceTree = "<group>"; };
+		324A15C719262950008FAF8D /* DPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPLoginViewController.xib; sourceTree = "<group>"; };
 		324A15CA19262962008FAF8D /* DPListC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListC.h; sourceTree = "<group>"; };
 		324A15CB19262962008FAF8D /* DPListC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListC.m; sourceTree = "<group>"; };
 		324A15CC19262962008FAF8D /* DPListC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPListC.xib; sourceTree = "<group>"; };
 		324A15D3192629C5008FAF8D /* DPDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDetailsViewController.h; sourceTree = "<group>"; };
 		324A15D4192629C5008FAF8D /* DPDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDetailsViewController.m; sourceTree = "<group>"; };
 		324A15D5192629C5008FAF8D /* DPDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPDetailsViewController.xib; sourceTree = "<group>"; };
-		324A15D819262B17008FAF8D /* DPLoginV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginV.h; sourceTree = "<group>"; };
-		324A15D919262B17008FAF8D /* DPLoginV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginV.m; sourceTree = "<group>"; };
-		324A15DB19262B2D008FAF8D /* DPLoginM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginM.h; sourceTree = "<group>"; };
-		324A15DC19262B2D008FAF8D /* DPLoginM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginM.m; sourceTree = "<group>"; };
-		32CF7B3D192C8139006A962A /* DPBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBaseVC.h; sourceTree = "<group>"; };
-		32CF7B3E192C8139006A962A /* DPBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBaseVC.m; sourceTree = "<group>"; };
+		324A15D819262B17008FAF8D /* DPLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginView.h; sourceTree = "<group>"; };
+		324A15D919262B17008FAF8D /* DPLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginView.m; sourceTree = "<group>"; };
+		324A15DB19262B2D008FAF8D /* DPLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginModel.h; sourceTree = "<group>"; };
+		324A15DC19262B2D008FAF8D /* DPLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginModel.m; sourceTree = "<group>"; };
+		325139D21962CF780016DD51 /* stub.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stub.jpg; sourceTree = "<group>"; };
+		325139D41962D0070016DD51 /* login.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = login.txt; sourceTree = "<group>"; };
 		32CF7B4A192DD4FB006A962A /* DPListM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListM.h; sourceTree = "<group>"; };
 		32CF7B4B192DD4FB006A962A /* DPListM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListM.m; sourceTree = "<group>"; };
 		32CF7B4D192DD5D0006A962A /* DPListV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListV.h; sourceTree = "<group>"; };
 		32CF7B4E192DD5D0006A962A /* DPListV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListV.m; sourceTree = "<group>"; };
-		32CF7B52192E09DA006A962A /* DPApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiClient.h; sourceTree = "<group>"; };
-		32CF7B53192E09DA006A962A /* DPApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiClient.m; sourceTree = "<group>"; };
-		32CF7B56192E19D3006A962A /* DPUserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPUserApi.h; sourceTree = "<group>"; };
-		32CF7B57192E19D3006A962A /* DPUserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPUserApi.m; sourceTree = "<group>"; };
-		32CF7B59192E1E89006A962A /* DPWeatherApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPWeatherApi.h; sourceTree = "<group>"; };
-		32CF7B5A192E1E89006A962A /* DPWeatherApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPWeatherApi.m; sourceTree = "<group>"; };
 		32CF7B5C192E21DD006A962A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		32CF7B5F192E21FD006A962A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		32CF7B61192E281E006A962A /* CurrentCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentCondition.h; sourceTree = "<group>"; };
-		32CF7B62192E281E006A962A /* CurrentCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentCondition.m; sourceTree = "<group>"; };
-		32CF7B64192E281F006A962A /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
-		32CF7B65192E281F006A962A /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
-		32CF7B68192E2C1E006A962A /* DPApiMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiMapper.h; sourceTree = "<group>"; };
-		32CF7B69192E2C1E006A962A /* DPApiMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiMapper.m; sourceTree = "<group>"; };
+		32CF7B88192F678C006A962A /* BBDataStorageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDataStorageProtocol.h; sourceTree = "<group>"; };
+		32CF7B89192F678C006A962A /* DPContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPContextProvider.h; sourceTree = "<group>"; };
+		32CF7B8A192F678C006A962A /* DPContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPContextProvider.m; sourceTree = "<group>"; };
+		32CF7B8B192F678C006A962A /* DPDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDataStorage.h; sourceTree = "<group>"; };
+		32CF7B8C192F678C006A962A /* DPDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataStorage.m; sourceTree = "<group>"; };
+		32CF7B8D192F678C006A962A /* DPDataStorageRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDataStorageRequestBuilder.h; sourceTree = "<group>"; };
+		32CF7B8E192F678C006A962A /* DPDataStorageRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataStorageRequestBuilder.m; sourceTree = "<group>"; };
+		32CF7B90192F678C006A962A /* CurrentCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentCondition.h; sourceTree = "<group>"; };
+		32CF7B91192F678C006A962A /* CurrentCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentCondition.m; sourceTree = "<group>"; };
+		32CF7B93192F678C006A962A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		32CF7B94192F678C006A962A /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		32CF7B95192F678C006A962A /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		32CF7B96192F678C006A962A /* DPManagerProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPManagerProvider.h; sourceTree = "<group>"; };
+		32CF7B97192F678C006A962A /* DPManagerProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPManagerProvider.m; sourceTree = "<group>"; };
+		32CF7B99192F678C006A962A /* DPDataMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDataMapper.h; sourceTree = "<group>"; };
+		32CF7B9A192F678C006A962A /* DPDataMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataMapper.m; sourceTree = "<group>"; };
+		32CF7B9C192F678C006A962A /* DPApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiClient.h; sourceTree = "<group>"; };
+		32CF7B9D192F678C006A962A /* DPApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiClient.m; sourceTree = "<group>"; };
+		32CF7B9E192F678C006A962A /* DPApiClientRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiClientRequestBuilder.h; sourceTree = "<group>"; };
+		32CF7B9F192F678C006A962A /* DPApiClientRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiClientRequestBuilder.m; sourceTree = "<group>"; };
+		32CF7BA0192F678C006A962A /* DPApiRequestBuilderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiRequestBuilderProtocol.h; sourceTree = "<group>"; };
+		32CF7BAB192F71E9006A962A /* DPModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPModelProtocol.h; sourceTree = "<group>"; };
 		D667D722653B4C659EF03076 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,8 +221,8 @@
 		324A15C019262906008FAF8D /* source */ = {
 			isa = PBXGroup;
 			children = (
-				32CF7B50192E09BD006A962A /* data_base */,
-				32CF7B51192E09BD006A962A /* networking */,
+				325139CC1962CB9B0016DD51 /* stubs */,
+				32CF7B86192F678C006A962A /* manager */,
 				324A15C119262906008FAF8D /* controllers */,
 			);
 			path = source;
@@ -218,7 +231,7 @@
 		324A15C119262906008FAF8D /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				32CF7B3C192C8139006A962A /* base */,
+				32CF7BAB192F71E9006A962A /* DPModelProtocol.h */,
 				324A15C419262906008FAF8D /* login_vc */,
 				324A15C319262906008FAF8D /* list_vc */,
 				324A15D2192629B2008FAF8D /* details_vc */,
@@ -243,13 +256,13 @@
 		324A15C419262906008FAF8D /* login_vc */ = {
 			isa = PBXGroup;
 			children = (
-				324A15C519262950008FAF8D /* DPLoginC.h */,
-				324A15C619262950008FAF8D /* DPLoginC.m */,
-				324A15C719262950008FAF8D /* DPLoginC.xib */,
-				324A15D819262B17008FAF8D /* DPLoginV.h */,
-				324A15D919262B17008FAF8D /* DPLoginV.m */,
-				324A15DB19262B2D008FAF8D /* DPLoginM.h */,
-				324A15DC19262B2D008FAF8D /* DPLoginM.m */,
+				324A15C519262950008FAF8D /* DPLoginViewController.h */,
+				324A15C619262950008FAF8D /* DPLoginViewController.m */,
+				324A15C719262950008FAF8D /* DPLoginViewController.xib */,
+				324A15D819262B17008FAF8D /* DPLoginView.h */,
+				324A15D919262B17008FAF8D /* DPLoginView.m */,
+				324A15DB19262B2D008FAF8D /* DPLoginModel.h */,
+				324A15DC19262B2D008FAF8D /* DPLoginModel.m */,
 			);
 			path = login_vc;
 			sourceTree = "<group>";
@@ -264,48 +277,73 @@
 			path = details_vc;
 			sourceTree = "<group>";
 		};
-		32CF7B3C192C8139006A962A /* base */ = {
+		325139CC1962CB9B0016DD51 /* stubs */ = {
 			isa = PBXGroup;
 			children = (
-				32CF7B3D192C8139006A962A /* DPBaseVC.h */,
-				32CF7B3E192C8139006A962A /* DPBaseVC.m */,
+				325139D21962CF780016DD51 /* stub.jpg */,
+				325139D41962D0070016DD51 /* login.txt */,
 			);
-			path = base;
+			path = stubs;
 			sourceTree = "<group>";
 		};
-		32CF7B50192E09BD006A962A /* data_base */ = {
+		32CF7B86192F678C006A962A /* manager */ = {
 			isa = PBXGroup;
 			children = (
-				32CF7B5E192E21FD006A962A /* Model.xcdatamodeld */,
-				32CF7B64192E281F006A962A /* Weather.h */,
-				32CF7B65192E281F006A962A /* Weather.m */,
-				32CF7B61192E281E006A962A /* CurrentCondition.h */,
-				32CF7B62192E281E006A962A /* CurrentCondition.m */,
+				32CF7B96192F678C006A962A /* DPManagerProvider.h */,
+				32CF7B97192F678C006A962A /* DPManagerProvider.m */,
+				32CF7B87192F678C006A962A /* database */,
+				32CF7B98192F678C006A962A /* mapper */,
+				32CF7B9B192F678C006A962A /* networking */,
 			);
-			path = data_base;
+			path = manager;
 			sourceTree = "<group>";
 		};
-		32CF7B51192E09BD006A962A /* networking */ = {
+		32CF7B87192F678C006A962A /* database */ = {
 			isa = PBXGroup;
 			children = (
-				32CF7B67192E2C0D006A962A /* mapper */,
-				32CF7B52192E09DA006A962A /* DPApiClient.h */,
-				32CF7B53192E09DA006A962A /* DPApiClient.m */,
-				32CF7B56192E19D3006A962A /* DPUserApi.h */,
-				32CF7B57192E19D3006A962A /* DPUserApi.m */,
-				32CF7B59192E1E89006A962A /* DPWeatherApi.h */,
-				32CF7B5A192E1E89006A962A /* DPWeatherApi.m */,
+				32CF7B88192F678C006A962A /* BBDataStorageProtocol.h */,
+				32CF7B89192F678C006A962A /* DPContextProvider.h */,
+				32CF7B8A192F678C006A962A /* DPContextProvider.m */,
+				32CF7B8B192F678C006A962A /* DPDataStorage.h */,
+				32CF7B8C192F678C006A962A /* DPDataStorage.m */,
+				32CF7B8D192F678C006A962A /* DPDataStorageRequestBuilder.h */,
+				32CF7B8E192F678C006A962A /* DPDataStorageRequestBuilder.m */,
+				32CF7B8F192F678C006A962A /* model */,
 			);
-			path = networking;
+			path = database;
 			sourceTree = "<group>";
 		};
-		32CF7B67192E2C0D006A962A /* mapper */ = {
+		32CF7B8F192F678C006A962A /* model */ = {
 			isa = PBXGroup;
 			children = (
-				32CF7B68192E2C1E006A962A /* DPApiMapper.h */,
-				32CF7B69192E2C1E006A962A /* DPApiMapper.m */,
+				32CF7B90192F678C006A962A /* CurrentCondition.h */,
+				32CF7B91192F678C006A962A /* CurrentCondition.m */,
+				32CF7B92192F678C006A962A /* Model.xcdatamodeld */,
+				32CF7B94192F678C006A962A /* Weather.h */,
+				32CF7B95192F678C006A962A /* Weather.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		32CF7B98192F678C006A962A /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				32CF7B99192F678C006A962A /* DPDataMapper.h */,
+				32CF7B9A192F678C006A962A /* DPDataMapper.m */,
 			);
 			path = mapper;
+			sourceTree = "<group>";
+		};
+		32CF7B9B192F678C006A962A /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				32CF7B9C192F678C006A962A /* DPApiClient.h */,
+				32CF7B9D192F678C006A962A /* DPApiClient.m */,
+				32CF7B9E192F678C006A962A /* DPApiClientRequestBuilder.h */,
+				32CF7B9F192F678C006A962A /* DPApiClientRequestBuilder.m */,
+				32CF7BA0192F678C006A962A /* DPApiRequestBuilderProtocol.h */,
+			);
+			path = networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,9 +425,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				324A15CE19262962008FAF8D /* DPListC.xib in Resources */,
-				324A15C919262950008FAF8D /* DPLoginC.xib in Resources */,
+				324A15C919262950008FAF8D /* DPLoginViewController.xib in Resources */,
 				324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */,
 				324A159C1926281C008FAF8D /* InfoPlist.strings in Resources */,
+				325139D51962D0070016DD51 /* login.txt in Resources */,
+				325139D31962CF780016DD51 /* stub.jpg in Resources */,
 				324A15A41926281C008FAF8D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,22 +483,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				324A15CD19262962008FAF8D /* DPListC.m in Sources */,
-				32CF7B63192E281E006A962A /* CurrentCondition.m in Sources */,
-				32CF7B54192E09DA006A962A /* DPApiClient.m in Sources */,
-				324A15DD19262B2D008FAF8D /* DPLoginM.m in Sources */,
-				32CF7B66192E281F006A962A /* Weather.m in Sources */,
-				32CF7B60192E21FD006A962A /* Model.xcdatamodeld in Sources */,
-				32CF7B58192E19D3006A962A /* DPUserApi.m in Sources */,
+				32CF7BA4192F678C006A962A /* CurrentCondition.m in Sources */,
+				32CF7BA5192F678C006A962A /* Model.xcdatamodeld in Sources */,
+				324A15DD19262B2D008FAF8D /* DPLoginModel.m in Sources */,
+				32CF7BA6192F678C006A962A /* Weather.m in Sources */,
 				32CF7B4F192DD5D0006A962A /* DPListV.m in Sources */,
+				32CF7BA7192F678C006A962A /* DPManagerProvider.m in Sources */,
+				32CF7BA3192F678C006A962A /* DPDataStorageRequestBuilder.m in Sources */,
 				324A15A21926281C008FAF8D /* DPAppDelegate.m in Sources */,
-				324A15DA19262B17008FAF8D /* DPLoginV.m in Sources */,
+				324A15DA19262B17008FAF8D /* DPLoginView.m in Sources */,
+				32CF7BA2192F678C006A962A /* DPDataStorage.m in Sources */,
+				32CF7BA8192F678C006A962A /* DPDataMapper.m in Sources */,
 				324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */,
-				324A15C819262950008FAF8D /* DPLoginC.m in Sources */,
-				32CF7B3F192C8139006A962A /* DPBaseVC.m in Sources */,
-				32CF7B5B192E1E89006A962A /* DPWeatherApi.m in Sources */,
-				32CF7B6A192E2C1E006A962A /* DPApiMapper.m in Sources */,
+				324A15C819262950008FAF8D /* DPLoginViewController.m in Sources */,
+				32CF7BAA192F678C006A962A /* DPApiClientRequestBuilder.m in Sources */,
 				324A159E1926281C008FAF8D /* main.m in Sources */,
 				32CF7B4C192DD4FB006A962A /* DPListM.m in Sources */,
+				32CF7BA1192F678C006A962A /* DPContextProvider.m in Sources */,
+				32CF7BA9192F678C006A962A /* DPApiClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +680,80 @@
 			};
 			name = Release;
 		};
+		325139CD1962CD6A0016DD51 /* Stub */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Stub;
+		};
+		325139CE1962CD6A0016DD51 /* Stub */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D667D722653B4C659EF03076 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVC/MVC-Prefix.pch";
+				INFOPLIST_FILE = "MVC/MVC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Stub;
+		};
+		325139CF1962CD6A0016DD51 /* Stub */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MVC.app/MVC";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVC/MVC-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MVCTests/MVCTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Stub;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -645,6 +761,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				324A15B81926281C008FAF8D /* Debug */,
+				325139CD1962CD6A0016DD51 /* Stub */,
 				324A15B91926281C008FAF8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -654,6 +771,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				324A15BB1926281C008FAF8D /* Debug */,
+				325139CE1962CD6A0016DD51 /* Stub */,
 				324A15BC1926281C008FAF8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -663,6 +781,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				324A15BE1926281C008FAF8D /* Debug */,
+				325139CF1962CD6A0016DD51 /* Stub */,
 				324A15BF1926281C008FAF8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -671,12 +790,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		32CF7B5E192E21FD006A962A /* Model.xcdatamodeld */ = {
+		32CF7B92192F678C006A962A /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				32CF7B5F192E21FD006A962A /* Model.xcdatamodel */,
+				32CF7B93192F678C006A962A /* Model.xcdatamodel */,
 			);
-			currentVersion = 32CF7B5F192E21FD006A962A /* Model.xcdatamodel */;
+			currentVersion = 32CF7B93192F678C006A962A /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

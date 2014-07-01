@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-OHHTTPStubs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AA79F7AC221444999F546775</key>
+		<key>1BD5935A2B5C42B2B77C0A40</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABF4505F28544583BE789121</key>
+		<key>4B67D5C560F04A5D9F2F3145</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F89B5A202978487F912A4410</key>
+		<key>79CB52E0CAA94662977221FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF623A0378A2416FA3392A16</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -20,9 +20,10 @@
 
 #import "DPAppDelegate.h"
 
-#import "DPLoginC.h"
-#import "DPLoginM.h"
+#import "DPLoginViewController.h"
+#import "DPLoginModel.h"
 #import "DPApiClient.h"
+#import <OHHTTPStubs/OHHTTPStubs.h>
 
 @implementation DPAppDelegate
 
@@ -30,8 +31,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    DPLoginC *loginVC = [DPLoginC new];
-    DPLoginM *model = [DPLoginM new];
+    [self loginStub];
+    
+    DPLoginViewController *loginVC = [DPLoginViewController new];
+    DPManagerProvider *provider = [DPManagerProvider new];
+    DPLoginModel *model = [[DPLoginModel alloc]initWithManagerProvider:provider];
     loginVC.model = model;
     
     self.navigation = [[UINavigationController alloc] initWithRootViewController:loginVC];
@@ -40,7 +44,26 @@
     self.window.rootViewController = self.navigation;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+
+- (void)loginStub
+{
+    id<OHHTTPStubsDescriptor> loginStub = nil;
+    loginStub = [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+        return [request.URL.absoluteString isEqualToString:@"http://www.mvc.com/demos/login?format=json&email=www%40www.www&password=wwwwww"];
+    } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+        return [[OHHTTPStubsResponse responseWithFileAtPath:OHPathForFileInBundle(@"login.txt",nil)
+                                                  statusCode:200
+                                                     headers:@{@"Content-Type":@"text/plain"}]
+                
+                
+                requestTime:2.f
+                responseTime:OHHTTPStubsDownloadSpeedWifi];
+    }];
+    loginStub.name = @"Login stub";
 }
 
 @end

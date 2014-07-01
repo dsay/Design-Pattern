@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "DPModelProtocol.h"
 
 @protocol DPListMProtocol
 
@@ -7,7 +8,7 @@
 
 @end
 
-@interface DPListM : NSObject
+@interface DPListM : NSObject<DPModelProtocol>
 
 @property (nonatomic, weak) id <DPListMProtocol> delegate;
 @property (nonatomic, strong, readonly) NSArray *items;

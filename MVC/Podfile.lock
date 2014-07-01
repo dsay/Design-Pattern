@@ -21,13 +21,16 @@ PODS:
   - libextobjc/EXTScope (0.4):
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4)
+  - OHHTTPStubs (3.1.2)
 
 DEPENDENCIES:
   - AFNetworking (<= 2.2.1)
   - libextobjc/EXTScope
+  - OHHTTPStubs
 
 SPEC CHECKSUMS:
   AFNetworking: 8dde8c8a6597ad95dac332a593c27e541bc87371
   libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
+  OHHTTPStubs: c1c2007839687eaf9b80f061ce84440515080ebb
 
 COCOAPODS: 0.32.1
