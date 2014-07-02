@@ -29,7 +29,7 @@
     
     NSError *error;
     NSMutableURLRequest *request =  [self.serializer requestWithMethod:@"GET"
-                                                 URLString:@"http://www.mvc.com/demos/login?format=json"
+                                                 URLString:@"http://www.mvc.com/demos/login"
                                                 parameters:params
                                                      error:&error];
     NSAssert(error == nil, @"Not create request");

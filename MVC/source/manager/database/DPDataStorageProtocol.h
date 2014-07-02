@@ -7,6 +7,8 @@ typedef NSDictionary* (^importBlock)(NSManagedObjectContext* context);
 
 @protocol DPRequestBuilderProtocol <NSObject>
 
+- (NSFetchRequest *)currentUser;
+
 @end
 
 @protocol DPDataStorageProtocol <NSObject>
@@ -15,9 +17,9 @@ typedef NSDictionary* (^importBlock)(NSManagedObjectContext* context);
 @property (readonly) NSString                     * username;
 @property (readonly) NSURL                        * databaseDirectory;
 
-- (NSArray *) performFetchRequest:(NSFetchRequest *)fetchRequest;
-- (void)      performFetchRequest:(NSFetchRequest *)fetchRequest
-                    completeBlock:(resultsBlock)block;
+- (NSArray *)performFetchRequest:(NSFetchRequest *)fetchRequest;
+- (void)performFetchRequest:(NSFetchRequest *)fetchRequest
+              completeBlock:(resultsBlock)block;
 - (void)importRequestWithBlock:(importBlock)block
                  completeBlock:(importResultsBlock)complete;
 

@@ -76,25 +76,22 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
     }
     
     [self.manager loginUserWithEmail:self.email
-                            password:self.password];
-    
-//    DPApiClient *client = self.manager.apiClient;
-//    NSURLRequest *request = [client.requestBuilder loginUserEmail:self.email
-//                                                         password:self.password];
-//    AFHTTPRequestOperation *operation =
-//    [client.manager HTTPRequestOperationWithRequest:request
-//                                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//                                                _canEdit = YES;
-//                                                NSParameterAssert(self.delegate);
-//                                                [self.delegate modelDidLogin:self];
-//                                            }
-//                                            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//                                                [self setStatus:DPLoginMServerError];
-//                                                _canEdit = YES;
-//                                                NSParameterAssert(self.delegate);
-//                                                [self.delegate modelDidUpdate:self];
-//                                            }];
-//    [operation start];
+                            password:self.password
+                          completion:^(BOOL success){
+                              
+                              _canEdit = YES;
+                              NSParameterAssert(self.delegate);
+                              
+                              if (success)
+                              {
+                                  [self.delegate modelDidLogin:self];
+                              }
+                              else
+                              {
+                                  [self setStatus:DPLoginMServerError];
+                                  [self.delegate modelDidUpdate:self];
+                              }
+                          }];
     _canEdit = NO;
 }
 

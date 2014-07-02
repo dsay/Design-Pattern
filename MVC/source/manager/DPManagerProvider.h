@@ -3,12 +3,14 @@
 #import "DPApiClient.h"
 #import "DPDataStorage.h"
 
-
 @interface DPManagerProvider : NSObject
 
 @property (nonatomic, strong, readonly) DPApiClient *apiClient;
 @property (nonatomic, strong, readonly) DPDataStorage *dataStorage;
 
-- (void)loginUserWithEmail:(NSString *)email
-                  password:(NSString *)password;
+- (NSOperation *)loginUserWithEmail:(NSString *)email
+                           password:(NSString *)password
+                         completion:(void(^)(BOOL success))completion;
+- (void)logout;
+
 @end

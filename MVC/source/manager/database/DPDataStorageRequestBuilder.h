@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "BBDataStorageProtocol.h"
+#import "DPDataStorageProtocol.h"
 
 @interface DPDataStorageRequestBuilder : NSObject
 <

@@ -19,6 +19,7 @@ UITextFieldDelegate
 
 @implementation DPLoginViewController
 
+#pragma mark - Life cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -106,7 +107,7 @@ UITextFieldDelegate
     [self animationScrollViewToPoint:scrollTo];
 }
 
-- (BOOL)            textField:(UITextField *)textField
+- (BOOL)textField:(UITextField *)textField
 shouldChangeCharactersInRange:(NSRange)range
             replacementString:(NSString *)string
 {

@@ -53,7 +53,7 @@
 {
     id<OHHTTPStubsDescriptor> loginStub = nil;
     loginStub = [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-        return [request.URL.absoluteString isEqualToString:@"http://www.mvc.com/demos/login?format=json&email=www%40www.www&password=wwwwww"];
+        return [request.URL.absoluteString isEqualToString:@"http://www.mvc.com/demos/login?email=www%40www.www&password=wwwwww"];
     } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
         return [[OHHTTPStubsResponse responseWithFileAtPath:OHPathForFileInBundle(@"login.txt",nil)
                                                   statusCode:200
