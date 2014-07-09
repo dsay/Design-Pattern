@@ -7,6 +7,7 @@
 @synthesize passwordTextField = passwordTextField;
 @synthesize loginButton = loginButton;
 @synthesize messageLabel = messageLabel;
+@synthesize indicatorView = indicatorView;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -29,6 +30,9 @@
     self.scrollView = [UIScrollView new];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     
+    UIView *contentView = [UIView new];
+    contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    
     self.emailTextField = [UITextField new];
     self.emailTextField.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -41,17 +45,20 @@
     self.messageLabel = [UILabel new];
     self.messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
-    UIView *contentView = [UIView new];
-    contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.indicatorView = [UIActivityIndicatorView new];
+    self.indicatorView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self addSubview:self.scrollView];
+    [self addSubview:self.indicatorView];
+
     [self.scrollView addSubview:contentView];
-    
+
     [contentView addSubview:self.emailTextField];
     [contentView addSubview:self.passwordTextField];
     [contentView addSubview:self.loginButton];
     [contentView addSubview:self.messageLabel];
     
+
     NSDictionary *views = NSDictionaryOfVariableBindings(scrollView,
                                                          emailTextField,
                                                          passwordTextField,
@@ -132,6 +139,22 @@
                                                     multiplier:1.f
                                                       constant:0]];
     
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:indicatorView
+                                                     attribute:NSLayoutAttributeCenterX
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeCenterX
+                                                    multiplier:1.f
+                                                      constant:0]];
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:indicatorView
+                                                     attribute:NSLayoutAttributeCenterY
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeCenterY
+                                                    multiplier:1.f
+                                                      constant:0]];
+    
     [self addConstraint:[NSLayoutConstraint constraintWithItem:loginButton
                                                      attribute:NSLayoutAttributeCenterX
                                                      relatedBy:NSLayoutRelationEqual
@@ -167,6 +190,10 @@
     self.emailTextField.tintColor = [UIColor redColor];
     self.passwordTextField.tintColor = [UIColor redColor];
     self.loginButton.tintColor = [UIColor redColor];
+    
+    self.indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    self.indicatorView.hidesWhenStopped = YES;
+    [self.indicatorView setColor:[UIColor redColor]];
 }
 
 @end

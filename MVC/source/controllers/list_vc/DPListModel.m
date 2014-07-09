@@ -1,20 +1,20 @@
-#import "DPListM.h"
+#import "DPListModel.h"
+#import "DPManagerProvider.h"
 
-
-@interface DPListM ()
-
-@property (nonatomic, strong) DPManagerProvider *manager;
+@interface DPListModel ()
 
 @end
 
-@implementation DPListM
+@implementation DPListModel
 
 - (instancetype)initWithManagerProvider:(DPManagerProvider *)manager
 {
-    NSParameterAssert(manager);
-    if (self = [super init]) {
-        [self setup];
+    if (self = [super init])
+    {
+        NSParameterAssert(manager);
         _manager = manager;
+        
+        [self setup];
     }
     return self;
 }

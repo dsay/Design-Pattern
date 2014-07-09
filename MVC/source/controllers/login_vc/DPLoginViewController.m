@@ -3,13 +3,14 @@
 #import "DPLoginView.h"
 #import "DPLoginModel.h"
 
-#import "DPListC.h"
-#import "DPListM.h"
+#import "DPListViewController.h"
+#import "DPListModel.h"
 
 @interface DPLoginViewController ()
 <
 DPLoginModelDelegate,
 DPModelDelegate,
+DPActivityDelegate,
 UITextFieldDelegate
 >
 
@@ -24,6 +25,7 @@ UITextFieldDelegate
 - (void)loadView
 {
     [super loadView];
+    
     self.view = [DPLoginView new];
 }
 
@@ -84,16 +86,24 @@ UITextFieldDelegate
 
 - (void)modelDidLogin:(DPLoginModel *)model
 {
-    //        DPListC *controller = [DPListC new];
-    //        DPListM *model = [[DPListM alloc] initWithManagerProvider:self.manager];
-    //        controller.model = model;
-    //
-    //        NSParameterAssert(self.delegate);
-    //        [self.delegate modelDidUpdate:self];
+    DPListViewController *controller = [DPListViewController new];
+    DPListModel *listModel = [[DPListModel alloc] initWithManagerProvider:self.model.manager];
+    controller.model = listModel;
+
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (void)modelDidStartActivity:(id)model
+{
+    [self.view.indicatorView startAnimating];
+}
+
+- (void)modelDidFinishActivity:(id)model
+{
+    [self.view.indicatorView stopAnimating];
+}
 #pragma mark - View Selectors
-- (void)pressLogin
+- (void)pressLogin 
 {
     [self.view endEditing:YES];
     [self.model login];

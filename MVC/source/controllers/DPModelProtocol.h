@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "DPManagerProvider.h"
 
+@class DPManagerProvider;
 @protocol DPModelProtocol <NSObject>
 
 - (instancetype)initWithManagerProvider:(DPManagerProvider *)manager;
@@ -10,5 +10,12 @@
 @protocol DPModelDelegate <NSObject>
 
 - (void)modelDidUpdate:(id)model;
+
+@end
+
+@protocol DPActivityDelegate <NSObject>
+@optional
+- (void)modelDidStartActivity:(id)model;
+- (void)modelDidFinishActivity:(id)model;
 
 @end

@@ -8,7 +8,7 @@
 @property (nonatomic, strong, readonly) DPApiClient *apiClient;
 @property (nonatomic, strong, readonly) DPDataStorage *dataStorage;
 
-- (NSOperation *)loginUserWithEmail:(NSString *)email
+- (AFHTTPRequestOperation *)loginUserWithEmail:(NSString *)email
                            password:(NSString *)password
                          completion:(void(^)(BOOL success))completion;
 - (void)logout;

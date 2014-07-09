@@ -7,6 +7,7 @@
 @property (nonatomic, strong) UITextField *passwordTextField;
 @property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) UILabel *messageLabel;
+@property (nonatomic, strong) UIActivityIndicatorView *indicatorView;
 
 - (void)decorateView;
 

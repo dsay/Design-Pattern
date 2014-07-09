@@ -1,5 +1,7 @@
 #import "DPLoginModel.h"
+
 #import "DPApiClientRequestBuilder.h"
+#import "DPManagerProvider.h"
 
 typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
     DPLoginMDefault,
@@ -15,19 +17,20 @@ static NSUInteger   const kPasswordMinLength = 6;
 @interface DPLoginModel()
 
 @property (nonatomic, assign) DPLoginMStatus status;
-@property (nonatomic, strong) DPManagerProvider *manager;
 @property (nonatomic, assign) BOOL canEdit;
 
 @end
 
 @implementation DPLoginModel
 
+#pragma mark - Life cycle
 - (instancetype)initWithManagerProvider:(DPManagerProvider *)manager
 {
-    NSParameterAssert(manager);
     if (self = [super init])
     {
+        NSParameterAssert(manager);
         _manager = manager;
+        
         [self setup];
     }
     return self;
@@ -65,40 +68,6 @@ static NSUInteger   const kPasswordMinLength = 6;
 }
 
 #pragma mark - input Data
-- (void)login
-{
-    if (!_canEdit) return;
-    
-    if (![self isEmailValid:self.email] ||
-        ![self isPasswordValid:self.password])
-    {
-        [self setStatus:DPLoginMIncorrectInput];
- 
-        NSParameterAssert(self.delegate);
-        [self.delegate modelDidUpdate:self];
-        return;
-    }
-    
-    [self.manager loginUserWithEmail:self.email
-                            password:self.password
-                          completion:^(BOOL success){
-                              
-                              _canEdit = YES;
-                              NSParameterAssert(self.delegate);
-                              
-                              if (success)
-                              {
-                                  [self.delegate modelDidLogin:self];
-                              }
-                              else
-                              {
-                                  [self setStatus:DPLoginMServerError];
-                                  [self.delegate modelDidUpdate:self];
-                              }
-                          }];
-    _canEdit = NO;
-}
-
 - (BOOL)shouldChangeEmailInRange:(NSRange)range
                  replacementText:(NSString *)text
 {
@@ -121,6 +90,64 @@ static NSUInteger   const kPasswordMinLength = 6;
     _password = [_password stringByReplacingCharactersInRange:range
                                                    withString:text];
     return YES;
+}
+
+#pragma mark - Activity
+- (void)login
+{
+    if (!_canEdit) return;
+    
+    NSParameterAssert(self.delegate);
+    
+    if (![self isEmailValid:self.email] ||
+        ![self isPasswordValid:self.password])
+    {
+        [self setStatus:DPLoginMIncorrectInput];
+        [self.delegate modelDidUpdate:self];
+        return;
+    }
+    
+    @weakify(self);
+    [self.manager loginUserWithEmail:self.email
+                            password:self.password
+                          completion:^(BOOL success){
+                              @strongify(self);
+                              
+                              [self finishActivity];
+                              
+                              if (success)
+                              {
+                                  [self.delegate modelDidLogin:self];
+                              }
+                              else
+                              {
+                                  [self setStatus:DPLoginMServerError];
+                                  [self.delegate modelDidUpdate:self];
+                              }
+                          }];
+    [self startActivity];
+}
+
+- (void)startActivity
+{
+    _canEdit = NO;
+
+    NSParameterAssert(self.delegate);
+    if ([self.delegate respondsToSelector:@selector(modelDidStartActivity:)])
+    {
+        [self.delegate modelDidStartActivity:self];
+    }
+}
+
+- (void)finishActivity
+{
+    _canEdit = YES;
+
+    NSParameterAssert(self.delegate);
+    if ([self.delegate respondsToSelector:@selector(modelDidFinishActivity:)])
+    {
+        [self.delegate modelDidFinishActivity:self];
+    }
 }
 
 #pragma mark - Validation

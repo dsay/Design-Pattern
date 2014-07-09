@@ -26,15 +26,18 @@ static DPDataStorage *_sharedInstance = nil;
 - (void)performFetchRequest:(NSFetchRequest *)request completeBlock:(void(^)(NSArray* results))block
 {
     NSManagedObjectContext* fetchContext = [self.contextProvider createTemporaryContext];
+    @weakify(self);
     [fetchContext performBlock:^{
+        @strongify(self);
         NSFetchRequest *requestCopy = [request copy];
         [requestCopy setResultType:NSManagedObjectIDResultType];
         [requestCopy setSortDescriptors:nil];
         
         NSError *error = nil;
         NSArray *ids = [fetchContext executeFetchRequest:requestCopy error:&error];
-    
+        @weakify(self);
         [self.contextProvider.mainContext performBlock:^{
+            @strongify(self);
             NSFetchRequest *modifiedRequest = [request copy];
             
             if (ids.count > 0)
@@ -68,8 +71,9 @@ static DPDataStorage *_sharedInstance = nil;
                                             selector:@selector(handleDidSaveNotification:)
                                                 name:NSManagedObjectContextDidSaveNotification
                                               object:nestedContex];
-    
+    @weakify(self);
     [nestedContex performBlock:^{
+        @strongify(self);
         NSDictionary *objects = block(nestedContex);
         NSError *error = nil;
         
@@ -86,7 +90,9 @@ static DPDataStorage *_sharedInstance = nil;
         [nestedContex save:&error];
         NSAssert(error == nil, @"Save nested Context : %@", error);
         
+        @weakify(self);
         [self.contextProvider.mainContext performBlock:^{
+            @strongify(self);
             NSMutableDictionary *permanentObjects = [NSMutableDictionary new];
             for (NSString *key in objectIDs.allKeys)
             {
@@ -104,9 +110,10 @@ static DPDataStorage *_sharedInstance = nil;
 {
     if (notification.object != self.contextProvider.mainContext)
     {
+        @weakify(self);
         [self.contextProvider.mainContext performBlock:^{
+            @strongify(self);
             [self.contextProvider.mainContext mergeChangesFromContextDidSaveNotification:notification];
-            
             
             NSError *error = nil;
             [self.contextProvider.mainContext save:&error];

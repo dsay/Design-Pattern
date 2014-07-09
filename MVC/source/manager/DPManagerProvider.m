@@ -37,13 +37,15 @@
 }
 
 #pragma mark - User
-- (NSOperation *)loginUserWithEmail:(NSString *)email
+- (AFHTTPRequestOperation *)loginUserWithEmail:(NSString *)email
                            password:(NSString *)password
                          completion:(void (^)(BOOL success))completion
 {
+    @weakify(self);
     return [self.apiClient loginUserWithEmail:email
                                      password:password
                                    completion:^(NSDictionary *response, NSString *error) {
+                                       @strongify(self);
                                        if (!error && response)
                                        {
                                            _contextProvider = [DPContextProvider new];
@@ -51,7 +53,6 @@
                                            _dataStorage.contextProvider = _contextProvider;
                                            
                                            isPersistenStoreValid = YES;
-                                           
                                            [self.dataStorage  importRequestWithBlock:^NSDictionary *(NSManagedObjectContext *context) {
                                                NSError *error;
                                                [DPUserMapper importUrerData:response

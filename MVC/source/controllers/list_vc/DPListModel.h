@@ -8,10 +8,12 @@
 
 @end
 
-@interface DPListM : NSObject<DPModelProtocol>
+@interface DPListModel : NSObject<DPModelProtocol>
 
 @property (nonatomic, weak) id <DPListMProtocol> delegate;
-@property (nonatomic, strong, readonly) NSArray *items;
-@property (nonatomic, strong, readonly) NSString *title;
+@property (readonly) DPManagerProvider *manager;
+
+@property (readonly) NSArray *items;
+@property (readonly) NSString *title;
 
 @end

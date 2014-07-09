@@ -1,15 +1,15 @@
-#import "DPListC.h"
+#import "DPListViewController.h"
 
-#import "DPListM.h"
-#import "DPListV.h"
+#import "DPListModel.h"
+#import "DPListView.h"
 
-@interface DPListC () <UITableViewDataSource, UITableViewDelegate>
+@interface DPListViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) IBOutlet DPListV *view;
+@property (nonatomic, strong) IBOutlet DPListView *view;
 
 @end
 
-@implementation DPListC
+@implementation DPListViewController
 
 - (void)viewDidLoad
 {

@@ -10,8 +10,8 @@
 
 @interface DPLoginModel : NSObject <DPModelProtocol>
 
-@property (nonatomic, weak) id <DPModelDelegate, DPLoginModelDelegate> delegate;
-
+@property (nonatomic, weak) id <DPModelDelegate, DPLoginModelDelegate, DPActivityDelegate> delegate;
+@property (readonly) DPManagerProvider *manager;
 @property (readonly) NSString *email;
 @property (readonly) NSString *password;
 @property (readonly) NSString *messageText;

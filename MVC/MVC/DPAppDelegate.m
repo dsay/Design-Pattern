@@ -24,6 +24,7 @@
 #import "DPLoginModel.h"
 #import "DPApiClient.h"
 #import <OHHTTPStubs/OHHTTPStubs.h>
+#import "DPManagerProvider.h"
 
 @implementation DPAppDelegate
 
