@@ -6,7 +6,7 @@
 
 - (NSFetchRequest *)currentUser
 {
-    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass(User.class)];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass(User.class)];
     
     return request;
 }

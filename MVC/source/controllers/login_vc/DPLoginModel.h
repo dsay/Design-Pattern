@@ -12,18 +12,20 @@
 
 @property (nonatomic, weak) id <DPModelDelegate, DPLoginModelDelegate> delegate;
 
-@property (nonatomic, strong, readonly) NSString *email;
-@property (nonatomic, strong, readonly) NSString *password;
-@property (nonatomic, strong, readonly) NSString *emailPlaceholder;
-@property (nonatomic, strong, readonly) NSString *passwordPlaceholder;
-@property (nonatomic, strong, readonly) NSString *messageText;
-@property (nonatomic, strong, readonly) NSString *title;
-@property (nonatomic, strong, readonly) NSString *loginTitle;
+@property (readonly) NSString *email;
+@property (readonly) NSString *password;
+@property (readonly) NSString *messageText;
+
+@property (readonly) NSString *emailPlaceholder;
+@property (readonly) NSString *passwordPlaceholder;
+@property (readonly) NSString *title;
+@property (readonly) NSString *loginTitle;
 
 - (void)login;
 
 - (BOOL)shouldChangeEmailInRange:(NSRange)range
                 replacementText:(NSString *)text;
+
 - (BOOL)shouldChangePasswordtInRange:(NSRange)range
                 replacementText:(NSString *)text;
 

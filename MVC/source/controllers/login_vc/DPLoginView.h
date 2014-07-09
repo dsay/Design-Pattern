@@ -2,12 +2,12 @@
 
 @interface DPLoginView : UIView
 
-@property (nonatomic, strong) IBOutlet                        UIScrollView *scrollView;
-@property (nonatomic, strong) IBOutletCollection(UITextField) NSArray *textFields;
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UITextField *emailTextField;
+@property (nonatomic, strong) UITextField *passwordTextField;
+@property (nonatomic, strong) UIButton *loginButton;
+@property (nonatomic, strong) UILabel *messageLabel;
 
-@property (nonatomic, strong) IBOutlet UITextField *emailTextField;
-@property (nonatomic, strong) IBOutlet UITextField *passwordTextField;
-@property (nonatomic, strong) IBOutlet UIButton *loginButton;
-@property (nonatomic, strong) IBOutlet UILabel *messageLabel;
+- (void)decorateView;
 
 @end

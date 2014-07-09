@@ -20,7 +20,6 @@
 		324A15B51926281C008FAF8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 324A15B31926281C008FAF8D /* InfoPlist.strings */; };
 		324A15B71926281C008FAF8D /* MVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15B61926281C008FAF8D /* MVCTests.m */; };
 		324A15C819262950008FAF8D /* DPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15C619262950008FAF8D /* DPLoginViewController.m */; };
-		324A15C919262950008FAF8D /* DPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15C719262950008FAF8D /* DPLoginViewController.xib */; };
 		324A15CD19262962008FAF8D /* DPListC.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15CB19262962008FAF8D /* DPListC.m */; };
 		324A15CE19262962008FAF8D /* DPListC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15CC19262962008FAF8D /* DPListC.xib */; };
 		324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D4192629C5008FAF8D /* DPDetailsViewController.m */; };
@@ -76,7 +75,6 @@
 		324A15B61926281C008FAF8D /* MVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCTests.m; sourceTree = "<group>"; };
 		324A15C519262950008FAF8D /* DPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginViewController.h; sourceTree = "<group>"; };
 		324A15C619262950008FAF8D /* DPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginViewController.m; sourceTree = "<group>"; };
-		324A15C719262950008FAF8D /* DPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPLoginViewController.xib; sourceTree = "<group>"; };
 		324A15CA19262962008FAF8D /* DPListC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListC.h; sourceTree = "<group>"; };
 		324A15CB19262962008FAF8D /* DPListC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListC.m; sourceTree = "<group>"; };
 		324A15CC19262962008FAF8D /* DPListC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPListC.xib; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 			children = (
 				324A15C519262950008FAF8D /* DPLoginViewController.h */,
 				324A15C619262950008FAF8D /* DPLoginViewController.m */,
-				324A15C719262950008FAF8D /* DPLoginViewController.xib */,
 				324A15D819262B17008FAF8D /* DPLoginView.h */,
 				324A15D919262B17008FAF8D /* DPLoginView.m */,
 				324A15DB19262B2D008FAF8D /* DPLoginModel.h */,
@@ -432,7 +429,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				324A15CE19262962008FAF8D /* DPListC.xib in Resources */,
-				324A15C919262950008FAF8D /* DPLoginViewController.xib in Resources */,
 				324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */,
 				324A159C1926281C008FAF8D /* InfoPlist.strings in Resources */,
 				325139D51962D0070016DD51 /* login.txt in Resources */,

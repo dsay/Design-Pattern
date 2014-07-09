@@ -7,6 +7,11 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
     DPLoginMServerError,
 };
 
+static NSString *   const kEmailRegularExpression =
+@"^([a-zA-Z0-9_-]+\\.)*[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*\\.[a-zA-Z]{2,6}$";
+static NSUInteger   const kPasswordMinLength = 6;
+
+
 @interface DPLoginModel()
 
 @property (nonatomic, assign) DPLoginMStatus status;
@@ -31,10 +36,10 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
 - (void)setup
 {
     [self setStatus:DPLoginMDefault];
+    
     _title = NSLocalizedString(@"Login", nil);
     _email = @"www@www.www";
     _password = @"wwwwww";
-    _messageText = NSLocalizedString(@"Welcome to MVC app", nil);
     _emailPlaceholder = NSLocalizedString(@"Email", nil);
     _passwordPlaceholder = NSLocalizedString(@"Password", nil);
     _loginTitle = NSLocalizedString(@"Login", nil);
@@ -45,7 +50,7 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
 {
     switch (status) {
         case DPLoginMDefault:
-            _messageText = NSLocalizedString(@"Welcome to MVC app", nil);
+            _messageText = NSLocalizedString(@"Welcome to MVC", nil);
             break;
         case DPLoginMIncorrectInput:
             _messageText = NSLocalizedString(@"Incorrect Input", nil);
@@ -62,11 +67,10 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
 #pragma mark - input Data
 - (void)login
 {
-    if (!_canEdit)
-        return;
+    if (!_canEdit) return;
     
     if (![self isEmailValid:self.email] ||
-        ![self isPasswordtValid:self.password])
+        ![self isPasswordValid:self.password])
     {
         [self setStatus:DPLoginMIncorrectInput];
  
@@ -124,7 +128,7 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
 {
     NSRegularExpression *regex =
     [NSRegularExpression
-     regularExpressionWithPattern:@"^([a-zA-Z0-9_-]+\\.)*[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*\\.[a-zA-Z]{2,6}$"
+     regularExpressionWithPattern:kEmailRegularExpression
      options:NSRegularExpressionCaseInsensitive
      error:nil];
     
@@ -133,9 +137,9 @@ typedef NS_ENUM(NSUInteger, DPLoginMStatus) {
                              range:NSMakeRange(0, [email length])] count];
 }
 
-- (BOOL)isPasswordtValid:(NSString *)password
+- (BOOL)isPasswordValid:(NSString *)password
 {
-    if (password.length >= 6)
+    if (password.length >= kPasswordMinLength)
         return YES;
     
     return NO;
