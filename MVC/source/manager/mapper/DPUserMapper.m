@@ -14,10 +14,6 @@ static NSString * const kPassword = @"password";
                  error:(NSError *__autoreleasing *)error
 {
     NSParameterAssert([userData isKindOfClass:[NSDictionary class]]);
-#if DEBUG
-    NSLog(@"%@", userData);
-#endif
-    
     User *user;
     
     NSFetchRequest *request =

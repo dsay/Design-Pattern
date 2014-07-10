@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322E929F196D7B070004B643 /* friends.txt in Resources */ = {isa = PBXBuildFile; fileRef = 322E929E196D7B070004B643 /* friends.txt */; };
+		322E92A2196E5A150004B643 /* DPApiClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E92A1196E5A150004B643 /* DPApiClient+User.m */; };
+		322E92A5196E5B5B0004B643 /* DPApiClient+Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E92A4196E5B5B0004B643 /* DPApiClient+Friends.m */; };
 		324A15921926281C008FAF8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324A15911926281C008FAF8D /* Foundation.framework */; };
 		324A15941926281C008FAF8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324A15931926281C008FAF8D /* CoreGraphics.framework */; };
 		324A15961926281C008FAF8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324A15951926281C008FAF8D /* UIKit.framework */; };
@@ -41,7 +44,6 @@
 		32CF7BA7192F678C006A962A /* DPManagerProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B97192F678C006A962A /* DPManagerProvider.m */; };
 		32CF7BA8192F678C006A962A /* DPDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9A192F678C006A962A /* DPDataMapper.m */; };
 		32CF7BA9192F678C006A962A /* DPApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9D192F678C006A962A /* DPApiClient.m */; };
-		32CF7BAA192F678C006A962A /* DPApiClientRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9F192F678C006A962A /* DPApiClientRequestBuilder.m */; };
 		E79C721442BC485B8482D9C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EFDCDA381F43FDBE1D0434 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,11 @@
 
 /* Begin PBXFileReference section */
 		20EFDCDA381F43FDBE1D0434 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		322E929E196D7B070004B643 /* friends.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = friends.txt; sourceTree = "<group>"; };
+		322E92A0196E5A150004B643 /* DPApiClient+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DPApiClient+User.h"; sourceTree = "<group>"; };
+		322E92A1196E5A150004B643 /* DPApiClient+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DPApiClient+User.m"; sourceTree = "<group>"; };
+		322E92A3196E5B5B0004B643 /* DPApiClient+Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DPApiClient+Friends.h"; sourceTree = "<group>"; };
+		322E92A4196E5B5B0004B643 /* DPApiClient+Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DPApiClient+Friends.m"; sourceTree = "<group>"; };
 		324A158E1926281C008FAF8D /* MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		324A15911926281C008FAF8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		324A15931926281C008FAF8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,9 +120,6 @@
 		32CF7B9A192F678C006A962A /* DPDataMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataMapper.m; sourceTree = "<group>"; };
 		32CF7B9C192F678C006A962A /* DPApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiClient.h; sourceTree = "<group>"; };
 		32CF7B9D192F678C006A962A /* DPApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiClient.m; sourceTree = "<group>"; };
-		32CF7B9E192F678C006A962A /* DPApiClientRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiClientRequestBuilder.h; sourceTree = "<group>"; };
-		32CF7B9F192F678C006A962A /* DPApiClientRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPApiClientRequestBuilder.m; sourceTree = "<group>"; };
-		32CF7BA0192F678C006A962A /* DPApiRequestBuilderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPApiRequestBuilderProtocol.h; sourceTree = "<group>"; };
 		32CF7BAB192F71E9006A962A /* DPModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPModelProtocol.h; sourceTree = "<group>"; };
 		D667D722653B4C659EF03076 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,14 +238,14 @@
 			isa = PBXGroup;
 			children = (
 				32CF7BAB192F71E9006A962A /* DPModelProtocol.h */,
-				324A15C419262906008FAF8D /* login_vc */,
-				324A15C319262906008FAF8D /* list_vc */,
-				324A15D2192629B2008FAF8D /* details_vc */,
+				324A15C419262906008FAF8D /* login */,
+				324A15C319262906008FAF8D /* list */,
+				324A15D2192629B2008FAF8D /* details */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		324A15C319262906008FAF8D /* list_vc */ = {
+		324A15C319262906008FAF8D /* list */ = {
 			isa = PBXGroup;
 			children = (
 				324A15CA19262962008FAF8D /* DPListViewController.h */,
@@ -252,10 +256,11 @@
 				32CF7B4A192DD4FB006A962A /* DPListModel.h */,
 				32CF7B4B192DD4FB006A962A /* DPListModel.m */,
 			);
+			name = list;
 			path = list_vc;
 			sourceTree = "<group>";
 		};
-		324A15C419262906008FAF8D /* login_vc */ = {
+		324A15C419262906008FAF8D /* login */ = {
 			isa = PBXGroup;
 			children = (
 				324A15C519262950008FAF8D /* DPLoginViewController.h */,
@@ -265,16 +270,18 @@
 				324A15DB19262B2D008FAF8D /* DPLoginModel.h */,
 				324A15DC19262B2D008FAF8D /* DPLoginModel.m */,
 			);
+			name = login;
 			path = login_vc;
 			sourceTree = "<group>";
 		};
-		324A15D2192629B2008FAF8D /* details_vc */ = {
+		324A15D2192629B2008FAF8D /* details */ = {
 			isa = PBXGroup;
 			children = (
 				324A15D3192629C5008FAF8D /* DPDetailsViewController.h */,
 				324A15D4192629C5008FAF8D /* DPDetailsViewController.m */,
 				324A15D5192629C5008FAF8D /* DPDetailsViewController.xib */,
 			);
+			name = details;
 			path = details_vc;
 			sourceTree = "<group>";
 		};
@@ -282,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				325139D41962D0070016DD51 /* login.txt */,
+				322E929E196D7B070004B643 /* friends.txt */,
 			);
 			path = stubs;
 			sourceTree = "<group>";
@@ -343,9 +351,10 @@
 			children = (
 				32CF7B9C192F678C006A962A /* DPApiClient.h */,
 				32CF7B9D192F678C006A962A /* DPApiClient.m */,
-				32CF7B9E192F678C006A962A /* DPApiClientRequestBuilder.h */,
-				32CF7B9F192F678C006A962A /* DPApiClientRequestBuilder.m */,
-				32CF7BA0192F678C006A962A /* DPApiRequestBuilderProtocol.h */,
+				322E92A0196E5A150004B643 /* DPApiClient+User.h */,
+				322E92A1196E5A150004B643 /* DPApiClient+User.m */,
+				322E92A3196E5B5B0004B643 /* DPApiClient+Friends.h */,
+				322E92A4196E5B5B0004B643 /* DPApiClient+Friends.m */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -432,6 +441,7 @@
 				324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */,
 				324A159C1926281C008FAF8D /* InfoPlist.strings in Resources */,
 				325139D51962D0070016DD51 /* login.txt in Resources */,
+				322E929F196D7B070004B643 /* friends.txt in Resources */,
 				324A15A41926281C008FAF8D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +499,7 @@
 				32CF7BA5192F678C006A962A /* Model.xcdatamodeld in Sources */,
 				324A15DD19262B2D008FAF8D /* DPLoginModel.m in Sources */,
 				32CF7BA6192F678C006A962A /* Weather.m in Sources */,
+				322E92A5196E5B5B0004B643 /* DPApiClient+Friends.m in Sources */,
 				32CF7B4F192DD5D0006A962A /* DPListView.m in Sources */,
 				32CF7BA7192F678C006A962A /* DPManagerProvider.m in Sources */,
 				32CF7BA3192F678C006A962A /* DPDataStorageRequestBuilder.m in Sources */,
@@ -497,10 +508,10 @@
 				32513A251963EFBE0016DD51 /* DPUserMapper.m in Sources */,
 				324A15DA19262B17008FAF8D /* DPLoginView.m in Sources */,
 				32CF7BA2192F678C006A962A /* DPDataStorage.m in Sources */,
+				322E92A2196E5A150004B643 /* DPApiClient+User.m in Sources */,
 				32CF7BA8192F678C006A962A /* DPDataMapper.m in Sources */,
 				324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */,
 				324A15C819262950008FAF8D /* DPLoginViewController.m in Sources */,
-				32CF7BAA192F678C006A962A /* DPApiClientRequestBuilder.m in Sources */,
 				324A159E1926281C008FAF8D /* main.m in Sources */,
 				32CF7B4C192DD4FB006A962A /* DPListModel.m in Sources */,
 				32CF7BA1192F678C006A962A /* DPContextProvider.m in Sources */,

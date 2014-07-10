@@ -33,6 +33,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     [self loginStub];
+    [self friendsStub];
     
     DPLoginViewController *loginVC = [DPLoginViewController new];
     DPManagerProvider *provider = [DPManagerProvider new];
@@ -65,6 +66,23 @@
                 responseTime:OHHTTPStubsDownloadSpeedWifi];
     }];
     loginStub.name = @"Login stub";
+}
+
+- (void)friendsStub
+{
+    id<OHHTTPStubsDescriptor> friendsStub = nil;
+    friendsStub = [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+        return [request.URL.absoluteString isEqualToString:@"http://www.mvc.com/demos/login?userID=1"];
+    } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+        return [[OHHTTPStubsResponse responseWithFileAtPath:OHPathForFileInBundle(@"friends.txt",nil)
+                                                 statusCode:200
+                                                    headers:@{@"Content-Type":@"text/plain"}]
+                
+                
+                requestTime:2.f
+                responseTime:OHHTTPStubsDownloadSpeedWifi];
+    }];
+    friendsStub.name = @"Friends Stub";
 }
 
 @end

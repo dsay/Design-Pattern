@@ -1,10 +1,12 @@
 #import "DPManagerProvider.h"
 
 #import "DPDataStorageRequestBuilder.h"
-#import "DPApiClientRequestBuilder.h"
 
 #import "DPDataMapper.h"
 #import "DPUserMapper.h"
+
+#import "DPApiClient+User.h"
+#import "DPApiClient+Friends.h"
 
 @interface DPManagerProvider ()
 {
@@ -17,6 +19,7 @@
 
 @implementation DPManagerProvider
 
+#pragma mark - Life cycle
 - (instancetype)init
 {
     if (self = [super init])
@@ -24,9 +27,6 @@
         isPersistenStoreValid = NO;
         
         _apiClient = [DPApiClient new];
-        
-        DPApiClientRequestBuilder *apirequesrBuilder = [DPApiClientRequestBuilder new];
-        _apiClient.requestBuilder = apirequesrBuilder;
         
         _dataStorage = [DPDataStorage new];
         
@@ -37,7 +37,7 @@
 }
 
 #pragma mark - User
-- (AFHTTPRequestOperation *)loginUserWithEmail:(NSString *)email
+- (NSOperation *)loginUserWithEmail:(NSString *)email
                            password:(NSString *)password
                          completion:(void (^)(BOOL success))completion
 {
@@ -78,5 +78,7 @@
     _contextProvider = nil;
     _dataStorage.contextProvider = nil;
 }
+
+#pragma mark - Friends
 
 @end
