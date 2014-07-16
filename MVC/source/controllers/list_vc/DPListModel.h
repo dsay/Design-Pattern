@@ -1,19 +1,19 @@
 #import <Foundation/Foundation.h>
 #import "DPModelProtocol.h"
 
-@protocol DPListMProtocol
+@interface DPListModel : NSObject <DPModelProtocol>
 
-- (void)listMDidUpdateData;
-- (void)showController:(UIViewController *)controller;
+@property (nonatomic, weak) id <DPModelDelegate, DPActivityDelegate> delegate;
 
-@end
-
-@interface DPListModel : NSObject<DPModelProtocol>
-
-@property (nonatomic, weak) id <DPListMProtocol> delegate;
-@property (readonly) DPManagerProvider *manager;
-
-@property (readonly) NSArray *items;
+@property (readonly) DPManagerProvider *provider;
 @property (readonly) NSString *title;
+@property (readonly) NSArray *items;
+
+- (NSInteger)numberOfSection;
+- (NSInteger)numberOfRowInSection:(NSInteger)section;
+- (NSString *)nameAtIndexPath:(NSIndexPath *)index;
+- (NSString *)locationAtIndexPath:(NSIndexPath *)index;
+
+- (void)updateData;
 
 @end

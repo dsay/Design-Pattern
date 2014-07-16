@@ -3,7 +3,7 @@
 @class DPManagerProvider;
 @protocol DPModelProtocol <NSObject>
 
-- (instancetype)initWithManagerProvider:(DPManagerProvider *)manager;
+- (instancetype)initWithManagerProvider:(DPManagerProvider *)provider;
 
 @end
 

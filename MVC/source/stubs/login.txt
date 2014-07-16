@@ -1,8 +1,8 @@
 {
-    "status" : "OK",
-    "data": {
-                    "id"       : "1",
-                    "name"     : "www@www.www",
-                    "password" : "wwwwww"
-           }
+"status" : "OK",
+"data": {
+"id"       : "1",
+"name"     : "www@www.www",
+"password" : "wwwwww"
+}
 }

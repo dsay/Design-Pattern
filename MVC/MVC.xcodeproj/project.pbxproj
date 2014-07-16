@@ -10,6 +10,11 @@
 		322E929F196D7B070004B643 /* friends.txt in Resources */ = {isa = PBXBuildFile; fileRef = 322E929E196D7B070004B643 /* friends.txt */; };
 		322E92A2196E5A150004B643 /* DPApiClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E92A1196E5A150004B643 /* DPApiClient+User.m */; };
 		322E92A5196E5B5B0004B643 /* DPApiClient+Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E92A4196E5B5B0004B643 /* DPApiClient+Friends.m */; };
+		322E9342196FC7C70004B643 /* DPListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E9341196FC7C70004B643 /* DPListTableViewCell.m */; };
+		322E9345196FD1290004B643 /* DPFriendsMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E9344196FD1290004B643 /* DPFriendsMapper.m */; };
+		322E93CC1973A6120004B643 /* DPFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E93CB1973A6120004B643 /* DPFriend.m */; };
+		322E93CF1973A6120004B643 /* DPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E93CE1973A6120004B643 /* DPUser.m */; };
+		322E93D31973A7950004B643 /* DPRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 322E93D21973A7950004B643 /* DPRefreshView.m */; };
 		324A15921926281C008FAF8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324A15911926281C008FAF8D /* Foundation.framework */; };
 		324A15941926281C008FAF8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324A15931926281C008FAF8D /* CoreGraphics.framework */; };
 		324A15961926281C008FAF8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324A15951926281C008FAF8D /* UIKit.framework */; };
@@ -24,23 +29,19 @@
 		324A15B71926281C008FAF8D /* MVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15B61926281C008FAF8D /* MVCTests.m */; };
 		324A15C819262950008FAF8D /* DPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15C619262950008FAF8D /* DPLoginViewController.m */; };
 		324A15CD19262962008FAF8D /* DPListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15CB19262962008FAF8D /* DPListViewController.m */; };
-		324A15CE19262962008FAF8D /* DPListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15CC19262962008FAF8D /* DPListViewController.xib */; };
 		324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D4192629C5008FAF8D /* DPDetailsViewController.m */; };
 		324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324A15D5192629C5008FAF8D /* DPDetailsViewController.xib */; };
 		324A15DA19262B17008FAF8D /* DPLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15D919262B17008FAF8D /* DPLoginView.m */; };
 		324A15DD19262B2D008FAF8D /* DPLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A15DC19262B2D008FAF8D /* DPLoginModel.m */; };
 		325139D51962D0070016DD51 /* login.txt in Resources */ = {isa = PBXBuildFile; fileRef = 325139D41962D0070016DD51 /* login.txt */; };
 		32513A251963EFBE0016DD51 /* DPUserMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32513A241963EFBE0016DD51 /* DPUserMapper.m */; };
-		32513A281963F0BD0016DD51 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 32513A271963F0BD0016DD51 /* User.m */; };
 		32CF7B4C192DD4FB006A962A /* DPListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B4B192DD4FB006A962A /* DPListModel.m */; };
 		32CF7B4F192DD5D0006A962A /* DPListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B4E192DD5D0006A962A /* DPListView.m */; };
 		32CF7B5D192E21DD006A962A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CF7B5C192E21DD006A962A /* CoreData.framework */; };
 		32CF7BA1192F678C006A962A /* DPContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B8A192F678C006A962A /* DPContextProvider.m */; };
 		32CF7BA2192F678C006A962A /* DPDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B8C192F678C006A962A /* DPDataStorage.m */; };
 		32CF7BA3192F678C006A962A /* DPDataStorageRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B8E192F678C006A962A /* DPDataStorageRequestBuilder.m */; };
-		32CF7BA4192F678C006A962A /* CurrentCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B91192F678C006A962A /* CurrentCondition.m */; };
 		32CF7BA5192F678C006A962A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B92192F678C006A962A /* Model.xcdatamodeld */; };
-		32CF7BA6192F678C006A962A /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B95192F678C006A962A /* Weather.m */; };
 		32CF7BA7192F678C006A962A /* DPManagerProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B97192F678C006A962A /* DPManagerProvider.m */; };
 		32CF7BA8192F678C006A962A /* DPDataMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9A192F678C006A962A /* DPDataMapper.m */; };
 		32CF7BA9192F678C006A962A /* DPApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7B9D192F678C006A962A /* DPApiClient.m */; };
@@ -64,6 +65,16 @@
 		322E92A1196E5A150004B643 /* DPApiClient+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DPApiClient+User.m"; sourceTree = "<group>"; };
 		322E92A3196E5B5B0004B643 /* DPApiClient+Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DPApiClient+Friends.h"; sourceTree = "<group>"; };
 		322E92A4196E5B5B0004B643 /* DPApiClient+Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DPApiClient+Friends.m"; sourceTree = "<group>"; };
+		322E9340196FC7C70004B643 /* DPListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListTableViewCell.h; sourceTree = "<group>"; };
+		322E9341196FC7C70004B643 /* DPListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListTableViewCell.m; sourceTree = "<group>"; };
+		322E9343196FD1290004B643 /* DPFriendsMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPFriendsMapper.h; sourceTree = "<group>"; };
+		322E9344196FD1290004B643 /* DPFriendsMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPFriendsMapper.m; sourceTree = "<group>"; };
+		322E93CA1973A6120004B643 /* DPFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPFriend.h; sourceTree = "<group>"; };
+		322E93CB1973A6120004B643 /* DPFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPFriend.m; sourceTree = "<group>"; };
+		322E93CD1973A6120004B643 /* DPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPUser.h; sourceTree = "<group>"; };
+		322E93CE1973A6120004B643 /* DPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPUser.m; sourceTree = "<group>"; };
+		322E93D11973A7950004B643 /* DPRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRefreshView.h; sourceTree = "<group>"; };
+		322E93D21973A7950004B643 /* DPRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRefreshView.m; sourceTree = "<group>"; };
 		324A158E1926281C008FAF8D /* MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		324A15911926281C008FAF8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		324A15931926281C008FAF8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,7 +95,6 @@
 		324A15C619262950008FAF8D /* DPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginViewController.m; sourceTree = "<group>"; };
 		324A15CA19262962008FAF8D /* DPListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListViewController.h; sourceTree = "<group>"; };
 		324A15CB19262962008FAF8D /* DPListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListViewController.m; sourceTree = "<group>"; };
-		324A15CC19262962008FAF8D /* DPListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPListViewController.xib; sourceTree = "<group>"; };
 		324A15D3192629C5008FAF8D /* DPDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDetailsViewController.h; sourceTree = "<group>"; };
 		324A15D4192629C5008FAF8D /* DPDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDetailsViewController.m; sourceTree = "<group>"; };
 		324A15D5192629C5008FAF8D /* DPDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DPDetailsViewController.xib; sourceTree = "<group>"; };
@@ -95,8 +105,6 @@
 		325139D41962D0070016DD51 /* login.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = login.txt; sourceTree = "<group>"; };
 		32513A231963EFBE0016DD51 /* DPUserMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPUserMapper.h; sourceTree = "<group>"; };
 		32513A241963EFBE0016DD51 /* DPUserMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPUserMapper.m; sourceTree = "<group>"; };
-		32513A261963F0BD0016DD51 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		32513A271963F0BD0016DD51 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		32CF7B4A192DD4FB006A962A /* DPListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListModel.h; sourceTree = "<group>"; };
 		32CF7B4B192DD4FB006A962A /* DPListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPListModel.m; sourceTree = "<group>"; };
 		32CF7B4D192DD5D0006A962A /* DPListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPListView.h; sourceTree = "<group>"; };
@@ -109,11 +117,7 @@
 		32CF7B8C192F678C006A962A /* DPDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataStorage.m; sourceTree = "<group>"; };
 		32CF7B8D192F678C006A962A /* DPDataStorageRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDataStorageRequestBuilder.h; sourceTree = "<group>"; };
 		32CF7B8E192F678C006A962A /* DPDataStorageRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDataStorageRequestBuilder.m; sourceTree = "<group>"; };
-		32CF7B90192F678C006A962A /* CurrentCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentCondition.h; sourceTree = "<group>"; };
-		32CF7B91192F678C006A962A /* CurrentCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentCondition.m; sourceTree = "<group>"; };
 		32CF7B93192F678C006A962A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		32CF7B94192F678C006A962A /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
-		32CF7B95192F678C006A962A /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		32CF7B96192F678C006A962A /* DPManagerProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPManagerProvider.h; sourceTree = "<group>"; };
 		32CF7B97192F678C006A962A /* DPManagerProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPManagerProvider.m; sourceTree = "<group>"; };
 		32CF7B99192F678C006A962A /* DPDataMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDataMapper.h; sourceTree = "<group>"; };
@@ -150,6 +154,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		322E933F196FC7AB0004B643 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				322E9340196FC7C70004B643 /* DPListTableViewCell.h */,
+				322E9341196FC7C70004B643 /* DPListTableViewCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		322E93D01973A7830004B643 /* refreshview */ = {
+			isa = PBXGroup;
+			children = (
+				322E93D11973A7950004B643 /* DPRefreshView.h */,
+				322E93D21973A7950004B643 /* DPRefreshView.m */,
+			);
+			path = refreshview;
+			sourceTree = "<group>";
+		};
 		324A15851926281C008FAF8D = {
 			isa = PBXGroup;
 			children = (
@@ -248,9 +270,10 @@
 		324A15C319262906008FAF8D /* list */ = {
 			isa = PBXGroup;
 			children = (
+				322E93D01973A7830004B643 /* refreshview */,
+				322E933F196FC7AB0004B643 /* cell */,
 				324A15CA19262962008FAF8D /* DPListViewController.h */,
 				324A15CB19262962008FAF8D /* DPListViewController.m */,
-				324A15CC19262962008FAF8D /* DPListViewController.xib */,
 				32CF7B4D192DD5D0006A962A /* DPListView.h */,
 				32CF7B4E192DD5D0006A962A /* DPListView.m */,
 				32CF7B4A192DD4FB006A962A /* DPListModel.h */,
@@ -324,13 +347,11 @@
 		32CF7B8F192F678C006A962A /* model */ = {
 			isa = PBXGroup;
 			children = (
-				32CF7B90192F678C006A962A /* CurrentCondition.h */,
-				32CF7B91192F678C006A962A /* CurrentCondition.m */,
 				32CF7B92192F678C006A962A /* Model.xcdatamodeld */,
-				32513A261963F0BD0016DD51 /* User.h */,
-				32513A271963F0BD0016DD51 /* User.m */,
-				32CF7B94192F678C006A962A /* Weather.h */,
-				32CF7B95192F678C006A962A /* Weather.m */,
+				322E93CD1973A6120004B643 /* DPUser.h */,
+				322E93CE1973A6120004B643 /* DPUser.m */,
+				322E93CA1973A6120004B643 /* DPFriend.h */,
+				322E93CB1973A6120004B643 /* DPFriend.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -342,6 +363,8 @@
 				32CF7B9A192F678C006A962A /* DPDataMapper.m */,
 				32513A231963EFBE0016DD51 /* DPUserMapper.h */,
 				32513A241963EFBE0016DD51 /* DPUserMapper.m */,
+				322E9343196FD1290004B643 /* DPFriendsMapper.h */,
+				322E9344196FD1290004B643 /* DPFriendsMapper.m */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -437,7 +460,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				324A15CE19262962008FAF8D /* DPListViewController.xib in Resources */,
 				324A15D7192629C5008FAF8D /* DPDetailsViewController.xib in Resources */,
 				324A159C1926281C008FAF8D /* InfoPlist.strings in Resources */,
 				325139D51962D0070016DD51 /* login.txt in Resources */,
@@ -495,15 +517,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				324A15CD19262962008FAF8D /* DPListViewController.m in Sources */,
-				32CF7BA4192F678C006A962A /* CurrentCondition.m in Sources */,
 				32CF7BA5192F678C006A962A /* Model.xcdatamodeld in Sources */,
 				324A15DD19262B2D008FAF8D /* DPLoginModel.m in Sources */,
-				32CF7BA6192F678C006A962A /* Weather.m in Sources */,
+				322E9342196FC7C70004B643 /* DPListTableViewCell.m in Sources */,
+				322E9345196FD1290004B643 /* DPFriendsMapper.m in Sources */,
 				322E92A5196E5B5B0004B643 /* DPApiClient+Friends.m in Sources */,
 				32CF7B4F192DD5D0006A962A /* DPListView.m in Sources */,
+				322E93CF1973A6120004B643 /* DPUser.m in Sources */,
+				322E93D31973A7950004B643 /* DPRefreshView.m in Sources */,
 				32CF7BA7192F678C006A962A /* DPManagerProvider.m in Sources */,
 				32CF7BA3192F678C006A962A /* DPDataStorageRequestBuilder.m in Sources */,
-				32513A281963F0BD0016DD51 /* User.m in Sources */,
 				324A15A21926281C008FAF8D /* DPAppDelegate.m in Sources */,
 				32513A251963EFBE0016DD51 /* DPUserMapper.m in Sources */,
 				324A15DA19262B17008FAF8D /* DPLoginView.m in Sources */,
@@ -511,6 +534,7 @@
 				322E92A2196E5A150004B643 /* DPApiClient+User.m in Sources */,
 				32CF7BA8192F678C006A962A /* DPDataMapper.m in Sources */,
 				324A15D6192629C5008FAF8D /* DPDetailsViewController.m in Sources */,
+				322E93CC1973A6120004B643 /* DPFriend.m in Sources */,
 				324A15C819262950008FAF8D /* DPLoginViewController.m in Sources */,
 				324A159E1926281C008FAF8D /* main.m in Sources */,
 				32CF7B4C192DD4FB006A962A /* DPListModel.m in Sources */,

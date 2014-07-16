@@ -44,7 +44,7 @@ static DPDataStorage *_sharedInstance = nil;
             {
                 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self IN %@", ids];
                 [modifiedRequest setPredicate:predicate];
-                [modifiedRequest setFetchBatchSize:request.fetchBatchSize];
+                [modifiedRequest setSortDescriptors:request.sortDescriptors];
                 
                 NSError* error = nil;
                 NSArray* results = [self.contextProvider.mainContext executeFetchRequest:modifiedRequest error:&error];

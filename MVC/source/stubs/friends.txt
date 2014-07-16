@@ -1,8 +1,47 @@
 {
-    "status" : "OK",
-    "data": {
-                    "id"       : "1",
-                    "name"     : "www@www.www",
-                    "password" : "wwwwww"
-           }
+"status" : "OK",
+"data": {
+"list": [
+{
+"id"       : "2",
+"name"     : "Nick",
+"location" : "Kyiv"
+},
+{
+"id"       : "3",
+"name"     : "Tom",
+"location" : "Kharkiv"
+},
+{
+"id"       : "4",
+"name"     : "Rob",
+"location" : "Dnipropetrovsk"
+},
+{
+"id"       : "5",
+"name"     : "Bob",
+"location" : "Odesa"
+},
+{
+"id"       : "6",
+"name"     : "Den",
+"location" : "Donetsk"
+},
+{
+"id"       : "7",
+"name"     : "Sem",
+"location" : "Zaporizhia"
+},
+{
+"id"       : "8",
+"name"     : "Klod",
+"location" : "Lviv"
+},
+{
+"id"       : "9",
+"name"     : "Jack",
+"location" : "Chernihiv"
+},
+]
+}
 }

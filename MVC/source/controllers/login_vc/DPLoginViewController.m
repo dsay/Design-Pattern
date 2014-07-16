@@ -71,8 +71,8 @@ UITextFieldDelegate
     self.view.passwordTextField.text = self.model.password;
     self.view.messageLabel.text = self.model.messageText;
     
-    self.view.emailTextField.placeholder = self.model.emailPlaceholder;
-    self.view.passwordTextField.placeholder = self.model.passwordPlaceholder;
+    self.view.emailTextField.placeholder = self.model.emailDefaultText;
+    self.view.passwordTextField.placeholder = self.model.passwordDefaultText;
     [self.view.loginButton setTitle:self.model.loginTitle forState:UIControlStateNormal];
     
     [self.view layoutIfNeeded];
@@ -87,7 +87,7 @@ UITextFieldDelegate
 - (void)modelDidLogin:(DPLoginModel *)model
 {
     DPListViewController *controller = [DPListViewController new];
-    DPListModel *listModel = [[DPListModel alloc] initWithManagerProvider:self.model.manager];
+    DPListModel *listModel = [[DPListModel alloc] initWithManagerProvider:self.model.provider];
     controller.model = listModel;
 
     [self.navigationController pushViewController:controller animated:YES];

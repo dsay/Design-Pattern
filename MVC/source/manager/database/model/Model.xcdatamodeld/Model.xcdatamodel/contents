@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="CurrentCondition" representedClassName="CurrentCondition" syncable="YES">
-        <attribute name="humidity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="observation_time" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pressure" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="temp_C" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="temp_F" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="weatherDesc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="weatherIconUrl" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="weathers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weather" inverseName="currentCondition" inverseEntity="Weather" syncable="YES"/>
+    <entity name="DPFriend" representedClassName="DPFriend" syncable="YES">
+        <attribute name="friendID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DPUser" inverseName="friends" inverseEntity="DPUser" syncable="YES"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES">
+    <entity name="DPUser" representedClassName="DPUser" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userID" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
-    </entity>
-    <entity name="Weather" representedClassName="Weather" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="tempMaxC" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="tempMaxF" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="tempMinC" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="tempMinF" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="weatherDesc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="weatherIconUrl" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="currentCondition" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentCondition" inverseName="weathers" inverseEntity="CurrentCondition" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DPFriend" inverseName="user" inverseEntity="DPFriend" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CurrentCondition" positionX="-63" positionY="-18" width="128" height="163"/>
-        <element name="Weather" positionX="-54" positionY="27" width="128" height="163"/>
-        <element name="User" positionX="-63" positionY="72" width="128" height="90"/>
+        <element name="DPUser" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="DPFriend" positionX="0" positionY="27" width="128" height="103"/>
     </elements>
 </model>

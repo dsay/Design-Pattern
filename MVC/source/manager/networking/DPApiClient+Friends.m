@@ -6,6 +6,7 @@
                                       completion:(CompletionBlock)completion
 {
     NSParameterAssert(userID);
+    
     NSDictionary *params = @{@"userID": userID};
     
     AFHTTPRequestOperation *operation =

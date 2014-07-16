@@ -62,7 +62,7 @@
                                                      headers:@{@"Content-Type":@"text/plain"}]
                 
                 
-                requestTime:2.f
+                requestTime:1.f
                 responseTime:OHHTTPStubsDownloadSpeedWifi];
     }];
     loginStub.name = @"Login stub";
@@ -72,7 +72,7 @@
 {
     id<OHHTTPStubsDescriptor> friendsStub = nil;
     friendsStub = [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-        return [request.URL.absoluteString isEqualToString:@"http://www.mvc.com/demos/login?userID=1"];
+        return [request.URL.absoluteString isEqualToString:@"http://www.mvc.com/demos/friends?userID=1"];
     } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
         return [[OHHTTPStubsResponse responseWithFileAtPath:OHPathForFileInBundle(@"friends.txt",nil)
                                                  statusCode:200

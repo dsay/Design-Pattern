@@ -11,13 +11,15 @@
 @interface DPLoginModel : NSObject <DPModelProtocol>
 
 @property (nonatomic, weak) id <DPModelDelegate, DPLoginModelDelegate, DPActivityDelegate> delegate;
-@property (readonly) DPManagerProvider *manager;
+
+@property (readonly) DPManagerProvider *provider;
+
 @property (readonly) NSString *email;
 @property (readonly) NSString *password;
 @property (readonly) NSString *messageText;
 
-@property (readonly) NSString *emailPlaceholder;
-@property (readonly) NSString *passwordPlaceholder;
+@property (readonly) NSString *emailDefaultText;
+@property (readonly) NSString *passwordDefaultText;
 @property (readonly) NSString *title;
 @property (readonly) NSString *loginTitle;
 

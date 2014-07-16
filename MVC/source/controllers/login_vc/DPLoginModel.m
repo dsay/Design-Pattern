@@ -22,12 +22,12 @@ static NSUInteger   const kPasswordMinLength = 6;
 @implementation DPLoginModel
 
 #pragma mark - Life cycle
-- (instancetype)initWithManagerProvider:(DPManagerProvider *)manager
+- (instancetype)initWithManagerProvider:(DPManagerProvider *)provider
 {
     if (self = [super init])
     {
-        NSParameterAssert(manager);
-        _manager = manager;
+        NSParameterAssert(provider);
+        _provider = provider;
         
         [self setup];
     }
@@ -41,8 +41,8 @@ static NSUInteger   const kPasswordMinLength = 6;
     _title = NSLocalizedString(@"Login", nil);
     _email = @"www@www.www";
     _password = @"wwwwww";
-    _emailPlaceholder = NSLocalizedString(@"Email", nil);
-    _passwordPlaceholder = NSLocalizedString(@"Password", nil);
+    _emailDefaultText = NSLocalizedString(@"Email", nil);
+    _passwordDefaultText = NSLocalizedString(@"Password", nil);
     _loginTitle = NSLocalizedString(@"Login", nil);
     _canEdit = YES;
 }
@@ -106,7 +106,7 @@ static NSUInteger   const kPasswordMinLength = 6;
     }
     
     @weakify(self);
-    [self.manager loginUserWithEmail:self.email
+    [self.provider loginUserWithEmail:self.email
                             password:self.password
                           completion:^(BOOL success){
                               @strongify(self);

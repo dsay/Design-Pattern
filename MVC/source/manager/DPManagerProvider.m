@@ -4,6 +4,7 @@
 
 #import "DPDataMapper.h"
 #import "DPUserMapper.h"
+#import "DPFriendsMapper.h"
 
 #import "DPApiClient+User.h"
 #import "DPApiClient+Friends.h"
@@ -79,6 +80,47 @@
     _dataStorage.contextProvider = nil;
 }
 
+- (void)currentUser:(void (^)(DPUser *user))block
+{
+  NSFetchRequest *request = [self.dataStorage.requestBuilder currentUser];
+  [self.dataStorage performFetchRequest:request
+                          completeBlock:^(NSArray *array) {
+                              NSParameterAssert(array.count);
+                              DPUser *user = array.lastObject;
+                              block(user);
+  }];
+}
 #pragma mark - Friends
-
+- (NSOperation *)updateFriendsListForUser:(DPUser *)user
+                          completion:(void (^)(NSArray *))completion
+{
+    @weakify(self, user);
+    return [self.apiClient friendsListForUserID:user.userID
+                                     completion:^(NSDictionary *response, NSString *error) {
+                                         @strongify(self, user);
+                                         if (!error && response)
+                                         {
+                                             NSManagedObjectID *userID = user.objectID;
+                                             [self.dataStorage  importRequestWithBlock:^NSDictionary *(NSManagedObjectContext *context) {
+                                                 NSError *error;
+                                                 DPUser *user = (DPUser *)[context objectWithID:userID];
+                                                 [DPFriendsMapper importFriendsData:response
+                                                                          toContext:context
+                                                                            forUser:user
+                                                                              error:&error];
+                                                 NSAssert(error == nil, @"Friends List not parse");
+                                                 
+                                                 return @{@"user": user};
+                                             } completeBlock:^(NSDictionary *result) {
+                                                 
+                                                 DPUser *user = result[@"user"];
+                                                 completion(user.friends.allObjects);
+                                             }];
+                                         }
+                                         else
+                                         {
+                                             completion(nil);
+                                         }
+                                     }];
+}
 @end

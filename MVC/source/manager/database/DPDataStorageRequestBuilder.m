@@ -1,12 +1,12 @@
 #import "DPDataStorageRequestBuilder.h"
 
-#import "User.h"
+#import "DPUser.h"
 
 @implementation DPDataStorageRequestBuilder
 
 - (NSFetchRequest *)currentUser
 {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass(User.class)];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass(DPUser.class)];
     
     return request;
 }

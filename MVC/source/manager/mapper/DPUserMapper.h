@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
 
+@class DPUser;
 @interface DPUserMapper : NSObject
 
-+ (void)importUrerData:(NSDictionary *)userData
-             toContext:(NSManagedObjectContext *)context
-                 error:(NSError *__autoreleasing *)error;
++ (DPUser *)importUrerData:(NSDictionary *)userData
+                 toContext:(NSManagedObjectContext *)context
+                     error:(NSError *__autoreleasing *)error;
 
 @end

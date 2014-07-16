@@ -1,6 +1,6 @@
 #import "DPUserMapper.h"
 
-#import "User.h"
+#import "DPUser.h"
 #import "DPDataMapper.h"
 
 static NSString * const kID = @"id";
@@ -9,15 +9,15 @@ static NSString * const kPassword = @"password";
 
 @implementation DPUserMapper
 
-+ (void)importUrerData:(NSDictionary *)userData
-             toContext:(NSManagedObjectContext *)context
-                 error:(NSError *__autoreleasing *)error
++ (DPUser *)importUrerData:(NSDictionary *)userData
+                 toContext:(NSManagedObjectContext *)context
+                     error:(NSError *__autoreleasing *)error
 {
     NSParameterAssert([userData isKindOfClass:[NSDictionary class]]);
-    User *user;
+    DPUser *user;
     
     NSFetchRequest *request =
-    [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass(User.class)];
+    [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass(DPUser.class)];
     request.fetchLimit = 1;
     
     NSArray *users = [context executeFetchRequest:request error:error];
@@ -27,7 +27,7 @@ static NSString * const kPassword = @"password";
     }
     else
     {
-        user = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(User.class)
+        user = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(DPUser.class)
                                              inManagedObjectContext:context];
     }
     
@@ -37,6 +37,7 @@ static NSString * const kPassword = @"password";
     user.userID = [mapper integerFromKey:kID] ? : user.userID;
     user.name = [mapper stringFromKey:kName] ? : user.name;
     user.password = [mapper stringFromKey:kPassword] ? : user.password;
+    return user;
 }
 
 @end
